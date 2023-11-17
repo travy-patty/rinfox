@@ -21,7 +21,7 @@ var aboutDialogTitle = "About Internet Explorer";
 //
 // We need to put these "getBool/Int/StringPref" in a try and catch block or
 // Firefox will throw an error if the bool was not yet created by the user (meaning
-// the bool is nonexistent in about:config) cause the code to stop, it's the reason why on
+// the bool is nonexistent in about:config) causing the code to stop, it's the reason why on
 // fresh installs the aboutDialog would look "half-themed", displaying Firefox icon and
 // information but with a white background. Only userContent was working.
 // - Bruno
