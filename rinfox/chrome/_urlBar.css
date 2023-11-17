@@ -1,0 +1,416 @@
+:root
+{
+  --urlbar-min-height: 22px !important;
+}
+
+#urlbar-container, 
+#search-container 
+{
+  --urlbar-container-height: 22.00px !important;
+  height: 22px !important;
+  padding-block: 0 !important;
+  margin-inline: 0 !important;
+}
+
+#urlbar
+{
+  --urlbar-height: 22.00px !important;
+  --urlbar-toolbar-height: 32.00px !important;
+  -moz-default-appearance: textfield !important;
+  appearance: textfield !important;
+  font: icon !important;
+  top: 3px !important;
+}
+
+#urlbar-background,
+#identity-icon-box,
+.searchbar-search-button:hover:not([addengines="true"]) > .searchbar-search-icon-overlay,
+#urlbar[breakout][breakout-extend] #urlbar-go-button,
+.search-panel-header,
+#page-action-buttons,
+#tracking-protection-icon-container,
+#identity-permission-box,
+#urlbar-go-button,
+.urlbarView-row:is([type="switchtab"], [type="remotetab"]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-action
+{
+  display: none !important;
+}
+
+#urlbar-input-container {
+  padding: 0 !important;
+}
+
+#urlbar-input::placeholder, 
+.searchbar-textbox::placeholder
+{
+  opacity: 1 !important;
+  color: GrayText !important;
+}
+
+#favimginurlbar
+{
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#favimginurlbar[src="chrome://branding/content/icon32.png"]
+{
+  content: url('images/ie_page.png') !important; 
+}
+
+#identity-box 
+{
+  margin-inline-end: 3px !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: 100% !important;
+}
+
+#urlbar[breakout][breakout-extend] {
+  left: unset !important;
+  width: 100% !important;
+  appearance: none !important;
+}
+
+#urlbar[breakout][breakout-extend] #urlbar-background {
+  display: flex !important;
+  -moz-default-appearance: textfield !important;
+  appearance: textfield !important;
+  box-shadow: none !important;
+  height: 22px !important;
+}
+
+.urlbarView {
+  width: unset !important;
+  margin-inline: 0 !important;
+  border: 1px solid #D4D0C8;
+  border-inline: 1px solid #D4D0C8 !important;
+  background-color: Field;
+  top: -1px !important;
+}
+
+#urlbar[breakout][breakout-extend] #urlbar-input-container {
+  padding: 2px !important;
+}
+
+.urlbarView-row {
+  border-radius: 0 !important;
+}
+
+#urlbar .search-one-offs:not([hidden]) {
+  padding-block: 4px !important;
+  padding-inline: 4px !important;
+  background-image: url('images/search-suggestion-bg.png') !important;
+  background-position: top center !important;
+  background-repeat: repeat-x !important;
+  background-color: #FFF !important;
+}
+
+#urlbar .searchbar-engine-one-off-item {
+  margin: 0 !important;
+}
+
+.urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
+  border-top: 1px solid #D6D6D6 !important;
+}
+
+#urlbar::after {
+  content: '' !important;
+  display: inline-block !important;
+  appearance: -moz-menulist-arrow-button !important;
+  width: 18px !important;
+  height: 26px !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+}
+
+.urlbarView-row {
+  min-height: 20px !important;
+}
+
+.urlbarView-row-inner {
+  min-height: 20px !important;
+  padding-block: 0 !important;
+  padding-inline: 6px !important;
+}
+
+.urlbarView-row[row-selectable]:not([selected]):hover {
+  background-color: ButtonFace !important;
+}
+
+.urlbarView-row[selected] {
+  color: #000 !important;
+  background-color: ButtonFace !important;
+}
+
+.urlbarView-title strong,
+.urlbarView-row[selected] .urlbarView-title strong {
+  font-weight: 500 !important;
+  color: Highlight !important;
+}
+
+.search-setting-button > .button-box > .button-icon {
+  list-style-image: url('images/settings.png') !important;
+}
+
+.urlbarView-button {
+  border-radius: 0 !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  list-style-image: none !important;
+  background-color: transparent !important;
+  background-size: unset !important;
+  background-image: url('images/remove-search-suggestion.png') !important;
+  background-position-x: 0 !important;
+  margin-right: 13px !important;
+}
+
+.urlbarView-button:hover {
+  background-position-x: -16px !important;
+}
+
+.urlbarView-button:active {
+  background-position-x: -32px !important;
+}
+
+#urlbar .searchbar-engine-one-off-item {
+  min-width: 22px !important;
+  height: 22px !important;
+}
+
+#urlbar-engine-one-off-item-bookmarks {
+  list-style-image: url('images/favorites.png') !important;
+}
+
+#urlbar-engine-one-off-item-history {
+  list-style-image: url('images/history-calendar.png') !important;
+}
+
+#urlbar-engine-one-off-item-tabs {
+  list-style-image: url('images/tabs.png') !important;
+}
+
+.searchbar-engine-one-off-item:not([selected]):hover {
+  border: 1px solid #279FD3 !important;
+  background-color: #D7F3FF !important;
+}
+
+.searchbar-engine-one-off-item:not([selected]):active {
+  border: 1px solid #3C7FB1 !important;
+  background-color: #B3CCE8 !important;
+}
+
+.urlbarView-results {
+  padding-block: 3px !important;
+  padding-inline: 2px !important;
+}
+
+.urlbarView-row[label]::before {
+  display: inline-flex;
+  margin-left: -1px !important;
+  padding-inline: 9px 4px !important;
+  height: 15px !important;
+  font: icon !important;
+  color: GrayText !important;
+  opacity: 1 !important;
+  background-color: Field !important;
+  z-index: 9 !important;
+}
+
+.urlbarView-row[label]::after {
+  content: '';
+  display: inline-flex;
+  width: calc(100% - 19px);
+  height: 1px;
+  background-color: ButtonFace !important;
+  position: absolute !important;
+  top: -9px !important;
+  left: 0 !important;
+}
+
+.urlbarView:not([actionoverride]) .urlbarView-row[type="switchtab"] > .urlbarView-row-inner > .urlbarView-url {
+  visibility: visible !important;
+}
+
+.urlbarView:not([actionoverride]) .urlbarView-row[type="switchtab"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-title-separator::before {
+  opacity: 1 !important;
+  margin-inline-end: .4em !important;
+}
+
+.urlbarView-row[type="bookmark"] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
+  background-image: url('images/favorites-14.png') !important;
+}
+
+.urlbarView-type-icon {
+  margin-left: 7px !important;
+  margin-top: 7px !important;
+}
+
+/* Hooray more hacky shit */
+.urlbarView-favicon[src="chrome://global/skin/icons/search-glass.svg"] {
+  content: url('images/search.png') !important; 
+}
+
+.urlbarView-favicon[src="chrome://browser/skin/history.svg"] {
+  content: url('images/history-icon.png') !important; 
+}
+
+.urlbarView-tags, .urlbarView-url, .urlbarView-title:not(:empty) ~ .urlbarView-action {
+  font-size: unset !important;
+}
+
+.urlbarView-title-separator::before {
+  content: "-" !important;
+}
+
+.searchbar-engine-one-off-add-engine:not([image]), moz-input-box > menupopup .context-menu-add-engine:not([image]) {
+  list-style-image: url('images/search.png') !important;
+}
+
+.urlbarView-row[dynamicType="onboardTabToSearch"] {
+  display: none !important;
+}
+
+/*
+  Refresh & Stop button
+*/
+
+#stop-reload-button {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 4px !important;
+  margin-inline: 4px !important;
+}
+
+#stop-button,
+#reload-button
+{
+  display: flex !important;
+  opacity: 1 !important;
+  width: 22px !important;
+  height: 22px !important;
+  padding: 0 !important;
+  list-style-image: none !important;
+  margin-bottom: 1px !important;
+}
+
+#stop-button > .toolbarbutton-icon,
+#reload-button > .toolbarbutton-icon
+{
+  width: 22px !important;
+  height: 22px !important;
+  background-image: url('images/reload-buttons.png') !important;
+}
+
+#stop-button > .toolbarbutton-icon 
+{
+  background-position-x: -22px !important;
+}
+
+#stop-button:hover > .toolbarbutton-icon,
+#reload-button:hover > .toolbarbutton-icon 
+{
+  background-position-y: -22px !important;
+}
+
+#stop-button:active > .toolbarbutton-icon,
+#reload-button:active > .toolbarbutton-icon 
+{
+  background-position-y: -44px !important;
+}
+
+/*
+  Search Bar
+*/
+
+#search-container {
+  width: 100% !important;
+  max-width: 234px !important;
+  margin-left: 4px !important;
+  position: relative !important;
+}
+
+#searchbar 
+{
+  display: flex !important;
+  flex-direction: row !important;
+  font: icon !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  margin-top: 6px !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+.searchbar-textbox 
+{
+  all: revert !important;
+  flex: 1 !important;
+  display: inline-block !important;
+  font: icon !important;
+  -moz-default-appearance: textfield !important;
+  appearance: textfield !important;
+  order: -1 !important;
+  min-width: 0 !important;
+}
+
+.searchbar-search-button 
+{
+  order: 2 !important;
+}
+
+.search-go-button {
+  width: 22px !important;
+  height: 22px !important;
+  display: flex !important;
+  background-color: transparent !important;
+  list-style-image: none !important;
+  background-image: url('images/search-button.png');
+  margin-inline: 0 !important;
+  margin-left: 4px !important;
+}
+
+.search-go-button:hover,
+.searchbar-search-icon:hover,
+.searchbar-search-button[addengines="true"]:hover > .searchbar-search-icon-overlay
+{
+  background-position-y: -22px !important;
+}
+
+.search-go-button:active,
+.searchbar-search-button:active .searchbar-search-icon,
+.searchbar-search-button[addengines="true"]:active > .searchbar-search-icon-overlay
+{
+  background-position-y: -44px !important;
+}
+
+.searchbar-search-icon
+{
+  width: 13px !important;
+  height: 22px !important;
+  margin-inline: 0 !important;
+  list-style-image: none !important;
+  background-image: url('images/search-button.png') !important;
+  background-position-x: -22px !important;
+}
+
+.searchbar-search-button[addengines="true"] > .searchbar-search-icon-overlay {
+  width: 13px !important;
+  height: 22px !important;
+  margin-inline: 0 !important;
+  margin-left: -13px !important;
+  margin-top: 0 !important;
+  list-style-image: none !important;
+  background-image: url('images/search-button.png') !important;
+  background-position-x: -44px !important;
+}
+
+#PopupSearchAutoComplete {
+  --panel-border-color: #D4D0C8 !important;
+  --panel-border-radius: 0 !important;
+  --panel-padding: 0 !important;
+}

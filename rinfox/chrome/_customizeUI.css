@@ -1,0 +1,38 @@
+#wrapper-back-button,
+#wrapper-forward-button,
+#wrapper-urlbar-container
+{
+  opacity: 1 !important;
+}
+
+#wrapper-history-panelmenu
+{
+  margin-left: -7px !important;
+  margin-right: 7px !important;
+}
+
+#wrapper-history-panelmenu > #history-panelmenu > .toolbarbutton-icon
+{
+  background-position-y: -87px !important;
+}
+
+#search-container, #wrapper-search-container {
+  flex: unset !important;
+}
+
+#wrapper-alltabs-button {
+  order: -1 !important;
+  opacity: 1 !important;
+}
+
+#wrapper-tiptab_william_wong-browser-action {
+  order: -2 !important;
+}
+
+#wrapper-bookmarks-menu-button {
+  order: -3 !important;
+}
+
+#wrapper-library-button {
+  order: -4 !important;
+}

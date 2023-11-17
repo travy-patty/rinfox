@@ -1,0 +1,571 @@
+  /* Disable "Add-ons" Toolbar Button */
+@supports -moz-bool-pref("rinfox.tweak.disable.addons-button") {
+  #unified-extensions-button {
+    display: none !important;
+  }
+}
+
+@supports -moz-bool-pref("rinfox.tweak.ie8") {
+  #navigator-toolbox-background {
+    background-color: #F2F6FB !important;
+  }
+  .tabbrowser-tab[visuallyselected=true] .tab-background {
+    background-image: linear-gradient(to bottom, #C3DDFB 0%, #F0F4FB 100%) !important;
+  }
+  .tab-background,
+  #tabs-newtab-button,
+  #alltabs-button
+  {
+    background-color: #E3EEFB !important;
+    background-image: none !important;
+    box-shadow: inset 1px 0 0 #FEFEFE, inset -1px 0 0 #FEFEFE, inset 0 1px 0 #FEFEFE !important;
+  }
+  .tabbrowser-tab:not([visuallyselected=true]):hover .tab-background,
+  #tabs-newtab-button:hover,
+  #alltabs-button:hover
+  {
+    background-image: linear-gradient(to bottom, #A3C9F8 0%, #EEF3FA 100%) !important;
+  }
+  .tabbrowser-tab[visuallyselected=true] .tab-background::before, 
+  .tabbrowser-tab[visuallyselected=true] .tab-background::after {
+    background-image: url('images/tab-corners-ie8.png') !important;
+  }
+  #PanelUI-menu-button .toolbarbutton-icon,
+  #unified-extensions-button .toolbarbutton-icon
+  {
+    display: none !important;
+    list-style-image: none !important;
+  }
+  #history-panelmenu > .toolbarbutton-icon {
+    background-image: url('images/history-ie8.png') !important;
+  }
+  #library-button {
+    padding-inline: 7px 11px !important;
+    gap: 5px !important;
+  }
+  #library-button > .toolbarbutton-text {
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-bottom: 2px !important;
+  }
+}
+
+@media (-moz-platform: windows-win7), (-moz-platform: windows-win8), (-moz-windows-glass), (-moz-windows-default-theme) {
+  @media not (-moz-windows-classic: 1) {
+    toolbar, #navigator-toolbox {
+      appearance: none !important;
+    }
+    #urlbar-container, 
+    #search-container 
+    {
+      --urlbar-container-height: 26.00px !important;
+      height: 26px !important;
+    }
+    #urlbar {
+      top: 0 !important;
+      appearance: none !important;
+      --urlbar-height: 26.00px !important;
+      --urlbar-toolbar-height: 32.00px !important;
+    }
+    #urlbar-background, #urlbar[breakout][breakout-extend] #urlbar-background {
+      top: 0 !important;
+      display: flex !important;
+      border-radius: 0 !important;
+      border: 0 !important;
+      background-color: transparent !important;
+      background-image: url('images/urlbar-spritesheet-middle.png') !important;
+      width: calc(100% - 3px) !important;
+      height: 26px !important;
+      margin-inline-start: 3px !important;
+      box-shadow: none !important;
+      outline: 0 !important;
+      appearance: none !important;
+    }
+    .urlbarView {
+      width: calc(100% - 1px) !important;
+      left: 1px !important; 
+      top: -2px !important;
+    }
+    #urlbar-background::before {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 26px;
+      position: absolute !important;
+      background-image: url('images/urlbar-spritesheet-left.png') !important;
+      left: -3px !important;
+    }
+    #urlbar:hover #urlbar-background,
+    #urlbar:hover #urlbar-background::before {
+      background-position-y: -26px !important;
+    }
+    #urlbar[breakout][breakout-extend] #urlbar-background,
+    #urlbar[breakout][breakout-extend] #urlbar-background::before{
+      background-position-y: -52px !important;
+    }
+    #stop-reload-button {
+      margin-inline: 0 !important;
+      gap: 0 !important;
+      height: 26px !important;
+      position: relative !important;
+      padding-right: 2px !important;
+    }
+    #stop-reload-button::before {
+      content: '' !important;
+      display: inline-block !important;
+      width: calc(100% - 3px) !important;
+      height: 100% !important;
+      background-image: url('images/urlbar-spritesheet-middle.png') !important;
+      position: absolute !important;
+      left: 0 !important;
+      z-index: -1 !important;
+    }
+    #identity-box {
+      padding: 4px !important;
+      padding-right: 0 !important;
+    }
+    #stop-reload-button::after {
+      content: '' !important;
+      display: inline-block !important;
+      width: 3px !important;
+      height: 100% !important;
+      background-image: url('images/urlbar-spritesheet-right.png') !important;
+      position: absolute !important;
+      right: 0 !important;
+      z-index: -1 !important;
+    }
+    #stop-button, #reload-button {
+      width: 25px !important;
+      border-left: 1px solid #696A6B !important;
+    }
+    #stop-button > .toolbarbutton-icon, #reload-button > .toolbarbutton-icon {
+      width: 16px !important;
+      height: 16px !important;
+      background-image: url('images/reload-buttons-vista.png') !important;
+      background-position-x: 0 !important;
+    }
+    #reload-button > .toolbarbutton-icon {
+      background-position-x: -16px !important;
+    }
+    #stop-button:hover > .toolbarbutton-icon, #reload-button:hover > .toolbarbutton-icon,
+    #stop-button:active > .toolbarbutton-icon, #reload-button:active > .toolbarbutton-icon {
+      background-position-y: 0 !important;
+    }
+    #stop-button:active > .toolbarbutton-icon, #reload-button:active > .toolbarbutton-icon {
+      transform: translate(1px, 1px) !important;
+    }
+    #stop-button:hover, #reload-button:hover, .search-go-container:hover, .searchbar-search-button:hover {
+      border-color: #16588B !important;
+      box-shadow: inset 0 0 0 1px rgb(255 255 255 / 50%) !important;
+      background-image: linear-gradient(to bottom, #D3EDFB 0%, #C6E9FA 50%, #A2DAF7 50%, #89D0F5 100%)
+    }
+    #stop-button:active, #reload-button:active, .search-go-container:active, .searchbar-search-button:active {
+      border-color: #1D415C !important;
+      box-shadow: inset 0 1px 0 #719CB3, inset 0 0 0 1px rgb(255 255 255 / 50%), inset 0 2px 0 #A9C6D6, inset 0 3px 0 #B9D9EC !important;
+      background-image: linear-gradient(to bottom, #C1E3F6 50%, #97D1F0 50%)
+    }
+    .browser-toolbar:not(.titlebar-color),
+    #navigator-toolbox-background {
+      background-color: transparent !important;
+      padding-bottom: 0 !important;
+    }
+    #toolbar-menubar::before,
+    #PanelUI-menu-button > .toolbarbutton-badge-stack > .toolbarbutton-badge {
+      display: none !important;
+    }
+    #TabsToolbar:not(:-moz-lwtheme) {
+      background-image: linear-gradient(to bottom, #FFFFFF 0%, #E5EAF5 50%, #CFD7EB 50%, #E9ECFA 100%) !important;
+    }
+    #TabsToolbar > .toolbar-items {
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+    }
+    #main-menubar:not(:-moz-lwtheme, :-moz-window-inactive) {
+      background-color: transparent !important;
+      border-radius: 0 !important;
+    }
+    #toolbar-menubar:not(:-moz-lwtheme) {
+      margin-top: 0 !important;
+      background-image: linear-gradient(to bottom, #FEFEFF 0%, #E5EAF5 25%, #D4DBED 25%, #E1E6F6 100%) !important;
+      text-shadow: none !important;
+      border-bottom: 1px solid #B6BCCC !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    #history-panelmenu > .toolbarbutton-icon {
+      background-image: url('images/history-vista.png') !important;
+    }
+    #history-panelmenu:not([disabled="true"]) > .toolbarbutton-icon {
+      background-position-x: -128px !important;
+    }
+    #history-panelmenu:not([disabled="true"]):hover > .toolbarbutton-icon {
+      background-position-x: -204px !important;
+    }
+    #history-panelmenu:not([disabled="true"]):active > .toolbarbutton-icon,
+    #history-panelmenu:not([disabled="true"])[open] > .toolbarbutton-icon {
+      background-position-x: -280px !important;
+    }
+    #history-panelmenu {
+      z-index: 0 !important;
+    }
+    #back-button, #forward-button {
+      z-index: 1 !important;
+      background-image: url('images/history-vista.png') !important;
+    }
+    #back-button > .toolbarbutton-icon,
+    #forward-button > .toolbarbutton-icon {
+      background-image: url('images/navigation-vista.png') !important;
+    }
+    #nav-bar {
+      padding: 2px 0 2px 0 !important;
+    }
+    #TabsToolbar toolbarbutton:not(#alltabs-button, #tiptab_william_wong-BAP) {
+      min-width: 30px !important;
+    }
+    #titlebar {
+      background-color: #B7C8F6 !important;
+      padding-bottom: 2px !important;
+    }
+    #searchbar {
+      height: 26px !important;
+      margin-top: 0 !important;
+      position: relative !important;
+      padding-inline: 3px !important;
+      align-items: center !important;
+    }
+    #search-container::before,
+    #search-container::after {
+      content: '';
+      display: inline-block;
+      width: 3px;
+      height: 26px;
+      top: 0 !important;
+      z-index: -1 !important;
+      position: absolute !important;
+    }
+    #search-container::before {
+      left: 0 !important;
+      background-image: url('images/urlbar-spritesheet-left.png');
+    }
+    #search-container::after {
+      right: 0 !important;
+      background-image: url('images/urlbar-spritesheet-right.png');
+    }
+    #searchbar::before {
+      content: '';
+      display: inline-block;
+      width: calc(100% - 6px);
+      height: 26px !important;
+      background-image: url('images/urlbar-spritesheet-middle.png') !important;
+      position: absolute !important;
+      left: 3px !important;
+      z-index: -1 !important;
+    }
+    .search-go-button {
+      width: 16px !important;
+      height: 16px !important;
+      padding: 0 !important;
+      background-image: none !important;
+      list-style-image: url('images/search-vista.png') !important;
+      margin-left: 0 !important;
+      margin-bottom: 2px !important;
+    }
+    .searchbar-textbox {
+      appearance: none !important;
+      border: 0 !important;
+      background-color: transparent !important;
+      outline: 0 !important;
+      padding-inline: 4px !important;
+    }
+    .searchbar-textbox::placeholder {
+      font-style: italic !important;
+    }
+    .search-go-container {
+      border-left: 1px solid transparent !important;
+      border-right: 1px solid transparent !important;
+      justify-content: center !important;
+      width: 26px !important;
+      height: 22px !important;
+    }
+    .searchbar-search-icon {
+      width: 7px !important;
+      height: 4px !important;
+      background-position-x: 0 !important;
+      background-image: url('images/chevron-vista.png') !important;
+      z-index: 1 !important;
+    }
+    .searchbar-search-button {
+      width: 15px !important;
+      height: 22px !important;
+      justify-content: center !important;
+      border-left: 1px solid transparent !important;
+      margin-right: -1px !important;
+    }
+    #urlbar-input::placeholder {
+      font-style: italic !important;
+      opacity: 0 !important;
+    }
+    #forward-button > .toolbarbutton-icon {
+      background-position-x: -27px !important;
+    }
+    #back-button > .toolbarbutton-icon {
+      background-position-x: 0px !important;
+    }
+    #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+      padding: 0 !important;
+    }
+    #search-container:hover::before, #search-container:hover::after, #search-container:hover #searchbar::before {
+      background-position-y: -26px !important;
+    }
+    #TabsToolbar {
+      border-top: 1px solid #A9BFD6 !important;
+      box-shadow: inset 0 -1px 0 #EDF3FE, inset 0 -2px 0 #8B919F, inset 1px 0 0 #FFF, inset -1px 0 0 #FFF !important;
+      padding-inline: 2px !important;
+    }
+    #PanelUI-menu-button::after,
+    #unified-extensions-button::after,
+    #help-button::after {
+      background-image: url('images/chevron-vista.png') !important;
+      margin-top: 2px !important;
+    }
+    #main-menubar > menu {
+      appearance: none !important;
+    }
+    #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) {
+      margin-top: -2px !important;
+      opacity: 0 !important;
+      border: 0 !important;
+    }
+    #menubar-items {
+      margin-top: 0 !important;
+    }
+    .searchbar-search-button[addengines="true"] > .searchbar-search-icon-overlay {
+      width: 15px !important;
+      height: 22px !important;
+      margin-right: -4px !important;
+      background-position-x: 0 !important;
+      background-image: url('images/search-suggestion-vista-background.png') !important; 
+      z-index: 0 !important;
+    }
+    .searchbar-search-button[addengines="true"] > .searchbar-search-icon {
+      transform: translateX(-2px) !important;
+    }
+    .searchbar-search-button:hover .searchbar-search-icon-overlay {
+      display: none !important;
+    } 
+    .searchbar-search-button:hover .searchbar-search-icon {
+      transform: translateX(-1px) !important;
+    }
+    #personal-toolbar-empty-description, toolbarbutton.bookmark-item:not(.subviewbutton) {
+      appearance: toolbarbutton !important;
+      margin: 0 !important;
+    }
+    #PersonalToolbar .toolbarbutton-1 {
+      margin-block: 0 !important;
+      align-items: center !important;
+      min-width: 24px !important;
+    }
+    #PersonalToolbar .toolbarbutton-1 > .toolbarbutton-icon {
+      width: 16px !important;
+      height: 16px !important;
+    }
+    #toolbar-menubar[autohide="true"][inactive="true"] + #PersonalToolbar {
+      background-image: linear-gradient(to bottom, #FEFEFF 0%, #E5EAF5 25%, #D4DBED 25%, #E1E6F6 100%) !important;
+      box-shadow: none !important;
+    }
+    #toolbar-menubar + #PersonalToolbar {
+      background-color: #E1E6F6 !important;
+      border-bottom: 1px solid #B6BCCC !important;
+      box-shadow: inset 0 1px 0 #FFF !important;
+    }
+    @supports -moz-bool-pref("rinfox.tweak.ie8") {
+      #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) {
+        margin-top: 0 !important;
+      }
+      #configuration_toolbar {
+        background-color: #F2F6FB !important;
+        border-bottom: 1px solid #8B919F !important;
+      }
+      #history-panelmenu > .toolbarbutton-icon {
+        background-image: url('images/history-7.png') !important;
+      }
+      #titlebar {
+        background-color: #F2F6FB !important;
+      }
+      #TabsToolbar:not(:-moz-lwtheme) {
+        padding-inline: 7px !important;
+        background-color: #E3EEFB !important;
+        background-image: none !important;
+      }
+      #tiptab_william_wong-browser-action {
+        margin-left: 0 !important;
+      }
+      #toolbar-menubar:not(:-moz-lwtheme) {
+        background-image: linear-gradient(to bottom, #F2F7FD 0%, #E9F2FC 25%, #E3EEFB 25%) !important;
+        box-shadow: inset 0 0 0 1px rgb(255 255 255 / 75%) !important;
+        border-bottom: 1px solid #9196A2 !important;
+        padding: 0 2px !important;
+      }
+      #PersonalToolbar {
+        padding-inline: 2px !important;
+        padding-block: 2px 1px !important;
+        box-shadow: inset 1px 0 0 #FFF, inset -1px 0 0 #FFF, inset 0 1px 0 #FFF !important;
+        background-image: linear-gradient(to bottom, #F2F7FD 0%, #E9F2FC 50%, #E3EEFB 50%) !important;
+      }
+      .search-go-button {
+        list-style-image: url('images/search-7.png') !important;
+      }
+      #searchbar {
+        padding-inline: 23px 4px !important;
+      }
+      #searchbar::after {
+        content: '' !important;
+        display: inline-block !important;
+        width: 16px !important;
+        height: 16px !important;
+        position: absolute !important;
+        pointer-events: none !important;
+        left: 5px !important;
+        background-image: url('images/search.png') !important;
+      }
+      #TabsToolbar #tiptab_william_wong-BAP {
+        border-top-right-radius: 0 !important;
+      }
+      #alltabs-button {
+        border-top-left-radius: 0 !important;
+      }
+    }
+    @media not (-moz-windows-compositor: 0) {
+      #titlebar {
+        margin: 2px !important;
+        margin-bottom: 0 !important;
+      }
+      #titlebar::after {
+        content: '' !important;
+        display: inline-block !important;
+        width: calc(100% - 2px) !important;
+        height: calc(100% - 33px) !important;
+        border: 1px solid rgb(255 255 255 / 50%) !important;
+        position: absolute !important;
+        top: 31px !important;
+        left: 0 !important;
+        box-shadow: inset 0 0 0 1px rgb(0 0 0 / 50%) !important;
+        pointer-events: none !important;
+        border-radius: 2px !important;
+      }
+      #browser {
+        margin: 2px !important;
+        margin-top: 0 !important;
+      }
+      #TabsToolbar {
+        border-top: 0 !important;
+      }
+    }
+  }
+}
+
+@media (-moz-windows-classic: 1) {
+  :root {
+    --tab-min-height: 26px !important;
+  }
+  #TabsToolbar {
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+  #TabsToolbar toolbarbutton {
+    margin-bottom: 0 !important;
+  }
+  #navigator-toolbox-background {
+    background-color: ButtonFace !important;
+    padding-bottom: 0 !important;
+  }
+  #urlbar::after {
+    width: 16px !important;
+    height: 18px !important;
+  }
+  #toolbar-menubar::before,
+  toolbar::before
+  {
+    content: '';
+    display: inline-block;
+    position: absolute !important;
+    appearance: none !important;
+    border-top: 1px solid ThreeDShadow !important;
+    box-shadow: inset 0 1px 0 ThreeDHighlight !important;
+    width: 100%;
+    height: 2px !important;
+    top: -2px !important;
+  }
+  .tab-background,
+  #tabs-newtab-button,
+  #alltabs-button,
+  #tiptab_william_wong-BAP {
+    border-radius: 0 !important;
+    border: 0 !important;
+    background-color: ButtonFace !important;
+    background-image: none !important;
+    margin-bottom: 0 !important;
+    box-shadow: inset -1px 0 0 ThreeDDarkShadow, inset 1px 1px 0 ButtonFace, inset -2px 0 0 ThreeDShadow, inset 2px 2px 0 ThreeDHighlight !important;
+  }
+  .tabbrowser-tab[visuallyselected=true] .tab-background { /*Active Tab Background */
+    background-image: linear-gradient(to bottom, ThreeDHighlight 0%, ButtonFace 100%) !important;
+  }
+  .tabbrowser-tab:not([visuallyselected=true]):hover .tab-background,
+  #tabs-newtab-button:hover,
+  #alltabs-button:hover
+  {
+    background-image: none !important;
+  }
+  .tabbrowser-tab[visuallyselected=true] .tab-background::before,
+  .tabbrowser-tab[visuallyselected=true] .tab-background::after {
+    display: none !important;
+  }
+  .tabbrowser-tab { 
+    margin-inline: 0.5px !important;
+    min-height: calc(var(--tab-min-height) - 2px) !important;
+    margin-top: 2px !important;
+    padding: 0 !important;
+  }
+  .tabbrowser-tab[visuallyselected=true] {
+    min-height: var(--tab-min-height) !important;
+    margin-top: 0px !important;
+  }
+  .tab-content {
+    padding: 0 var(--inline-tab-padding) !important;
+  }
+  #tabs-newtab-button {
+    margin-inline: 1px !important;
+    margin-top: 2px !important;
+  }
+  #alltabs-button {
+    margin-top: 2px !important;
+  }
+  toolbarbutton {
+    padding: 0 4px !important;
+  }
+  #TabsToolbar toolbarbutton:not(#tabs-newtab-button, #alltabs-button):hover {
+    box-shadow: inset -1px -1px 0 ThreeDShadow, inset 1px 1px ThreeDHighlight !important;
+  }
+  #TabsToolbar  toolbarbutton:not(#tabs-newtab-button, #alltabs-button):active,
+  #TabsToolbar toolbarbutton:not(#tabs-newtab-button, #alltabs-button)[open] {
+    box-shadow: inset -1px -1px 0 ThreeDHighlight, inset 1px 1px ThreeDShadow !important;
+  }
+  #TabsToolbar toolbarbutton:active > .toolbarbutton-badge-stack,
+  #TabsToolbar toolbarbutton:not(#tabs-newtab-button, #alltabs-button):active > .toolbarbutton-icon,
+  #TabsToolbar toolbarbutton[open] > .toolbarbutton-badge-stack,
+  #TabsToolbar toolbarbutton:not(#tabs-newtab-button, #alltabs-button)[open] > .toolbarbutton-icon,
+  #TabsToolbar toolbarbutton:active > .toolbarbutton-text,
+  #TabsToolbar toolbarbutton:not(#tabs-newtab-button, #alltabs-button)[open] > .toolbarbutton-text
+  {
+    transform: translate(1px, 1px) !important;
+  }
+  #TabsToolbar toolbarbutton:not(#tabs-newtab-button, #alltabs-button, #history-panelmenu) {
+    height: 22px !important;
+  }
+  #PanelUI-menu-button .toolbarbutton-icon, #unified-extensions-button .toolbarbutton-icon {
+    margin-left: 0 !important;
+  }
+}

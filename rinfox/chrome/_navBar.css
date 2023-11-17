@@ -1,0 +1,104 @@
+#nav-bar
+{
+  padding: 2px 3px 1px 3px !important;
+  margin-top: -2px !important;
+}
+
+/*
+  Navigation Buttons
+*/
+
+#back-button,
+#forward-button 
+{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 29px !important;
+  height: 29px !important;
+  padding: 0 !important;
+  background-image: url('images/navigation_frame.png') !important;
+  opacity: 1 !important;
+}
+
+#back-button
+{
+  background-position-x: 0px !important;
+}
+
+#forward-button
+{
+  background-position-x: -29px !important;
+}
+
+
+#back-button > .toolbarbutton-icon,
+#forward-button > .toolbarbutton-icon 
+{
+  width: 29px !important;
+  height: 29px !important;
+  background-image: url('images/navigation.png') !important;
+  background-position-y: -87px !important;
+  list-style-image: none !important;
+}
+
+#back-button > .toolbarbutton-icon
+{
+  background-position-x: 0px !important;
+}
+
+#forward-button > .toolbarbutton-icon
+{
+  background-position-x: -29px !important;
+}
+
+#back-button:not([disabled="true"]) > .toolbarbutton-icon,
+#forward-button:not([disabled="true"]) > .toolbarbutton-icon
+{
+  background-position-y: 0 !important;
+}
+
+#back-button:not([disabled="true"]):hover > .toolbarbutton-icon,
+#forward-button:not([disabled="true"]):hover > .toolbarbutton-icon
+{
+  background-position-y: -29px !important;
+}
+
+#back-button:not([disabled="true"]):active > .toolbarbutton-icon,
+#forward-button:not([disabled="true"]):active > .toolbarbutton-icon
+{
+  background-position-y: -58px !important;
+}
+
+/* History Dropdown */
+
+#history-panelmenu,
+#history-panelmenu > .toolbarbutton-icon
+{
+  width: 23px !important;
+  height: 29px !important;
+  padding: 0 !important;
+}
+
+#history-panelmenu > .toolbarbutton-icon {
+  background-image: url('images/history.png') !important;
+  background-position-y: -87px !important;
+  list-style-image: none !important;
+}
+
+#history-panelmenu:not([disabled="true"]) > .toolbarbutton-icon {
+  background-position-y: 0 !important;
+}
+
+#history-panelmenu:not([disabled="true"]):hover > .toolbarbutton-icon {
+  background-position-y: -29px !important;
+}
+
+#history-panelmenu:not([disabled="true"]):active > .toolbarbutton-icon,
+#history-panelmenu:not([disabled="true"])[open="true"] > .toolbarbutton-icon {
+  background-position-y: -58px !important;
+}
+
+#forward-button + #history-panelmenu {
+  transform: translateX(-7px) !important;
+}

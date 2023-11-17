@@ -1,0 +1,102 @@
+@-moz-document url("chrome://browser/content/aboutDialog.xhtml") {
+* {
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+}
+
+textarea {
+	appearance: none !important;
+	border: 0 !important;
+	box-shadow: inset -1px -1px 0 #FFF, inset 1px 1px 0 #A0A0A0, inset -2px -2px 0 #E3E3E3, inset 2px 2px 0 #696969 !important;
+	padding: 3px 2.5px !important;
+	color: #616161 !important;
+	background-color: #F4F4F4 !important;
+	line-height: 13px !important;
+	outline: 0 !important;
+}
+
+#aboutDialog {
+	width: 368px !important;
+	height: 345px !important;
+	line-height: 1 !important;
+	font-family: Tahoma !important;
+	font-size: 8pt !important;
+}
+
+#aboutDialogContainer {
+	width: 368px !important;
+	height: 345px !important;
+	padding: 13px 21px !important;
+	background-color: #FFFFFF !important;
+	color: #616161 !important;
+	color-scheme: unset !important;
+}
+
+.aboutBoxBanner {
+	margin-left: 2px !important;
+	margin-bottom: 22px !important;
+}
+
+.aboutBoxInfoList {
+	list-style: none !important;
+	line-height: 13px !important;
+	margin-bottom: 14px !important;
+}
+
+.legalNotice {
+	width: 326px !important;
+	height: 75px !important;
+	padding-right: 10px !important;
+}
+
+.closeButton {
+	width: 69px !important;
+	height: 22px !important;
+	margin-bottom: 1px !important;
+}
+
+.footerContainer {
+	display: flex;
+	justify-content: space-between !important;
+	align-items: center !important;
+	margin-top: 18px !important;
+}
+
+.copyrightLink {
+	margin-left: -19px !important;
+}
+	
+@supports -moz-bool-pref("rinfox.tweak.ie8") {
+
+	#aboutDialog,
+	#aboutDialogContainer
+	{
+		width: 368px !important;
+		height: 296px !important;
+	}
+	textarea {
+		background-color: transparent !important;
+		box-shadow: none !important;
+		padding: 0 !important;
+		user-select: none !important;
+	}
+	.legalNotice {
+		padding-right: 0 !important;
+	}
+	.windowsFlag {
+		display: none !important;
+	}
+	.copyrightLink {
+		margin-left: 0 !important;
+	}
+	.aboutBoxInfoList {
+		margin-bottom: 13px !important;
+	}
+	.footerContainer {
+		margin-top: 0 !important;
+	}
+
+}
+
+}

@@ -1,0 +1,271 @@
+/*
+  Toolbar Buttons
+*/
+
+#help-button,
+#wrapper-help-button {
+  order: 3 !important;
+}
+
+#PanelUI-button,
+#wrapper-PanelUI-button {
+  order: 2 !important;
+}
+
+#unified-extensions-button,
+#wrapper-unified-extensions-button {
+  order: 1 !important;
+}
+
+#PanelUI-menu-button .toolbarbutton-icon,
+#unified-extensions-button .toolbarbutton-icon
+{
+  margin-left: 1px !important;
+}
+
+#PanelUI-menu-button::after,
+#unified-extensions-button::after,
+#help-button::after
+{
+  display: inline-block !important;
+  content: '\75';
+  color: transparent !important;
+  font-family: 'Marlett' !important;
+  background-image: url('images/chevron.png') !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  transform: translateX(-1px) !important;
+}
+
+#PanelUI-menu-button .toolbarbutton-text,
+#unified-extensions-button > .toolbarbutton-text {
+  display: flex !important;
+  min-height: unset !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0 4px !important;
+}
+
+#TabsToolbar toolbarbutton:not(#alltabs-button) .toolbarbutton-icon {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+#help-button .toolbarbutton-icon {
+  transform: translateX(2px) !important;
+}
+
+#help-button::after {
+  transform: translateX(1px) !important;
+}
+
+/*
+  Tabs, most likely having to use more hackish methods
+  to recreate Internet Explorer 7's tabs.
+*/
+
+:root {
+  --inline-tab-padding: 4px !important;
+  --tab-min-height: 28px !important;
+}
+
+#tabbrowser-tabs:not([secondarytext-unsupported]) .tab-label-container {
+  height: unset !important;
+}
+
+.tabbrowser-tab:not([pinned]) {
+  max-width: 180px !important;
+}
+
+#navigator-toolbox-background { /* Tabs bottom border */
+  background-color: #B7C8F6 !important;
+  padding-bottom: 2px !important;
+}
+
+:root[inFullscreen] #navigator-toolbox-background {
+  padding-bottom: 0 !important;
+}
+
+#TabsToolbar {
+  box-shadow: inset 0 -1px 0 #EDF3FE, inset 0 -2px 0 #8B919F!important;
+}
+
+#TabsToolbar toolbarbutton {
+  margin-bottom: 2px !important;
+}
+
+.tabbrowser-tab { 
+  min-height: calc(var(--tab-min-height) - 4px) !important;
+  margin-top: 4px !important;
+  margin-inline: -1px !important;
+  padding: 0 !important;
+}
+
+.tabbrowser-tab[visuallyselected=true] {
+  min-height: calc(var(--tab-min-height) + 2px) !important;
+  margin-top: 2px !important;
+}
+
+.tab-background,
+#tabs-newtab-button,
+#alltabs-button,
+#TabsToolbar #tiptab_william_wong-BAP
+{
+  background-image: linear-gradient(to bottom, #F2F5FA 0%, #E5EAF5 25%, #CFD7EB 25%, #ECEEFC 100%) !important;
+  box-shadow: inset 1px 0 0 #F6FAFF, inset -1px 0 0 #F6FAFF, inset 0 1px 0 #F6FAFF !important;
+  margin-block: 0 !important;
+  border-radius: 0 !important;
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border: 1px solid #9196A2 !important;
+  border-bottom: 0 !important;
+  margin-bottom: 2px !important;
+}
+
+.tabbrowser-tab:not([visuallyselected=true]):hover .tab-background,
+#tabs-newtab-button:hover,
+#alltabs-button:hover,
+#TabsToolbar #tiptab_william_wong-BAP:hover
+{
+  background-image: linear-gradient(to bottom, #EDF3FC 0%, #C6DDF7 25%, #99C6EE 25%, #B0D3F0 75%, #D9E9F9 100%) !important;
+}
+
+.tabbrowser-tab[visuallyselected=true] .tab-background { /*Active Tab Background */
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  background-image: linear-gradient(to bottom, #FCFDFD 0%, #E8F5FC 25%, #CFE7FA 25%, #B9D1FA 100%) !important;
+}
+
+.tabbrowser-tab[visuallyselected=true] .tab-background::before, /* Bottom Round Corners */
+.tabbrowser-tab[visuallyselected=true] .tab-background::after {
+  content: '' !important;
+  display: inline-block !important;
+  width: 4px !important;
+  height: 3px !important;
+  background-image: url('images/tab-corners.png') !important;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: -2px !important;
+}
+
+.tabbrowser-tab[visuallyselected=true] .tab-background::after {
+  left: unset !important;
+  right: -2px !important;
+  background-position-x: -4px !important;
+}
+
+.tabbrowser-tab[visuallyselected=true] {
+  z-index: 1!important;
+}
+
+:root:not([uidensity="compact"]) .tab-content[pinned] {
+  padding: 0 calc(var(--inline-tab-padding) + 2px) !important;
+}
+
+.tab-throbber:not([pinned]), .tab-icon-pending:not([pinned]), .tab-icon-image:not([pinned]), .tab-sharing-icon-overlay:not([pinned]), .tab-icon-overlay:not([pinned]) {
+  margin-inline-end: 3px !important;
+}
+
+.tab-content {
+  padding: 0 var(--inline-tab-padding) 2px var(--inline-tab-padding) !important;
+}
+
+.tab-icon-image[src="chrome://branding/content/icon32.png"],
+.tab-icon-image:not([src], [pinned], [crashed], [sharing], [pictureinpicture])
+{
+  display: flex !important;
+  content: url('images/blank-page.png') !important;
+}
+
+.tab-icon-stack[busy] .tab-icon-image {
+  display: none !important;
+  border: 0 !important;
+  content: none !important;
+}
+
+.tab-throbber[busy],
+.tab-throbber[progress]
+{
+  opacity: 1 !important;
+  background-image: url('images/spinner.png') !important;
+  border: 0 !important;
+}
+
+
+/* Tip Tab Extension */
+#tiptab_william_wong-browser-action {
+  order: -1 !important;
+  padding-block: 5px 2px !important;
+  margin-inline: -1px !important;
+  margin-left: 8px !important;
+}
+
+#TabsToolbar #tiptab_william_wong-BAP {
+  width: 24px !important;
+  list-style-image: url('images/all-tabs-preview.png') !important;
+  height: 100% !important;
+}
+
+/* New Tab Button */
+#tabs-newtab-button {
+  margin-top: 4px !important;
+  list-style-image: none !important;
+  width: 30px !important;
+}
+
+#tabs-newtab-button:hover {
+  list-style-image: url('images/newtab.png') !important;
+}
+
+/* Close Tab Button */
+.tab-close-button {
+  width: 17px !important;
+  height: 16px !important;
+  padding: 0 !important;
+  list-style-image: none !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-image: url('images/close-tab.png') !important;
+  margin-right: 0 !important;
+}
+
+.tab-close-button:hover {
+  background-position-x: -17px !important;
+}
+
+.tab-close-button:active {
+  background-position-x: -34px !important;
+}
+
+.tabbrowser-tab:not([visuallyselected=true], :hover) .tab-close-button {
+  display: none !important;
+}
+
+/* All Tabs Button */
+#alltabs-button {
+  min-width: 16px !important;
+  order: -1 !important;
+  margin-top: 4px !important;
+  list-style-image: url('images/chevron.png') !important;
+}
+
+#alltabs-button .toolbarbutton-badge-stack,
+#alltabs-button .toolbarbutton-icon 
+{
+  width: 5px !important;
+  height: 3px !important;
+}
+
+#alltabs-button[open="true"] {
+  outline: 1px dotted #000 !important;
+  outline-offset: -4px !important;
+}
+
+/* Favorite Buttons */
+#TabsToolbar #library-button {
+  order: -2 !important;
+}
+
+#TabsToolbar #bookmarks-menu-button {
+  order: -1 !important;
+}

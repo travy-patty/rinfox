@@ -1,0 +1,128 @@
+@import url('_aboutBox.css');
+
+@-moz-document url-prefix(moz-extension://e29c18fd-17cb-41d6-a90e-56901c7ea070/tiptab.html) {
+
+.h-container .left-pane,
+.content-title-bar,
+.header-bar,
+.tab-topbar-menu,
+.tabbox-arc,
+.tab-topbar-cmds .cmd-close-tab .icon
+{
+	display: none !important;
+}
+
+html,
+body {
+	height: 100vh;
+	overflow: hidden !important;
+}
+
+body 
+{
+	font-size: 8pt !important;
+	background-attachment: fixed !important;
+	background-image: linear-gradient(to bottom, #FFFFFF, #C6CBD8) !important;
+}
+
+.all-tab-lane {
+	border-radius: 10px !important;
+	border: 1px solid #A5A8B4;
+	background: #F1F2F5 !important;
+	height: calc(100% - 10px) !important;
+	box-shadow: inset 0 0 0 1px #F5F5F8, inset 0 0 0 2px #F6F7F9, 3px 3px 3px rgba(0, 0, 0, 0.3), 3px 3px 3px rgba(0, 0, 0, 0.3) !important;
+}
+
+.h-container .mid-pane {
+	margin-left: 10px !important;
+	margin-right: 10px !important;
+}
+
+.v-container .h-container {
+	padding-top: 10px !important;
+}
+
+.main-content {
+	margin-bottom: 10px !important;
+}
+
+.tab-thumbnail {
+	border: 1px solid #706963 !important;
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2), 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.tab-topbar-cmds {
+	opacity: 1 !important;
+	right: 16px;
+	top: 0 !important;
+	left: unset !important;
+}
+
+.tab-topbar {
+	color: #000000 !important;
+	background: transparent !important;
+	border: 0 !important;
+}
+
+.bold {
+	font-weight: normal !important;
+}
+
+.tab-box:focus {
+	box-shadow: none !important;
+}
+
+.tab-grid .tab-box {
+	border: 1px solid transparent;
+	padding-left: 16px !important;
+	padding-right: 16px !important;
+	padding-bottom: 16px !important;
+	margin-left: 22px !important;
+	margin-right: 22px !important;
+}
+
+.tab-grid .tab-box:hover {
+	background: #ECF4F9 !important;
+	border-color: #AEBCBF !important;
+}
+
+.tab-grid .tab-box:active {
+	background: #B3DCF1 !important;
+	border-color: #AEBCBF !important;
+}
+
+.tab-topbar-cmds:hover {
+	box-shadow: none !important;
+	background-color: transparent !important;
+}
+
+.tab-topbar-cmds .cmd-close-tab {
+	width: 17px !important;
+	height: 16px !important;
+	border: 0 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	background-color: transparent !important;
+	transition: none !important;
+	background-image: url('https://cdn.discordapp.com/attachments/758913738136354848/1064438775809331230/close-tab.png') !important;
+}
+
+.tab-topbar-cmds .cmd-close-tab:hover {
+	background-position-x: -17px !important;
+}
+
+.tab-topbar-cmds .cmd-close-tab:active {
+	background-position-x: -34px !important;
+}
+
+.tab-img {
+	height: 136px !important;
+	width: 224px !important;
+}
+
+.tab-thumbnail {
+	width: unset !important;
+	height: 138px !important;
+}
+
+}

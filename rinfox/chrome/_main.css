@@ -1,0 +1,41 @@
+#PanelUI-menu-button
+{
+  padding-inline-end: 0 !important;
+  list-style-image: url('images/settings.png') !important;
+}
+
+#unified-extensions-button {
+  list-style-image: url('images/addons.png') !important;
+}
+
+#home-button {
+  list-style-image: url('images/home.png') !important; 
+}
+
+#print-button {
+  list-style-image: url('images/print.png') !important; 
+}
+
+#downloads-indicator-anchor {
+  list-style-image: url('images/downloads.png') !important;
+}
+
+#email-link-button {
+  list-style-image: url('images/email.png') !important;
+}
+
+#help-button {
+  list-style-image: url('images/help.png') !important;
+}
+
+#library-button {
+  list-style-image: url('images/favorites.png') !important;
+}
+
+#bookmarks-menu-button {
+  list-style-image: url('images/add-favorite.png') !important;
+}
+
+menupopup {
+  appearance: unset !important;
+}

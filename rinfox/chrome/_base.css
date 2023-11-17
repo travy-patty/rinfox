@@ -1,0 +1,103 @@
+/*
+  Root Variables
+*/
+
+:root 
+{
+	--toolbar-bgcolor: -moz-Dialog !important;
+	--toolbar-bgimage: none !important;
+	--toolbar-color: -moz-DialogText !important;
+	--lwt-text-color: -moz-DialogText !important;
+	--lwt-toolbarbutton-icon-fill: -moz-DialogText !important;
+	--toolbar-field-focus-border-color: Highlight !important;
+	--lwt-toolbar-field-background-color: -moz-Field !important;
+	--lwt-toolbar-field-color: -moz-FieldText !important;
+	--lwt-toolbar-field-border-color: rgb(204, 204, 204) !important;
+	--lwt-toolbar-field-focus: -moz-Field !important;
+	--lwt-toolbar-field-focus-color: -moz-FieldText !important;
+	--toolbarbutton-vertical-text-padding: calc(var(--toolbarbutton-inner-padding) - 1px) !important;
+	--toolbarbutton-border-radius: 2px !important;
+	--toolbarbutton-icon-fill-opacity: 1 !important;
+	--panel-separator-color: ThreeDLightShadow !important;
+	--arrowpanel-background: -moz-Field !important;
+	--arrowpanel-color: -moz-FieldText !important;
+	--arrowpanel-border-color: ThreeDShadow !important;
+	--arrowpanel-dimmed: hsla(0,0%,80%,.35) !important;
+	--arrowpanel-dimmed-further: hsla(0,0%,80%,.5) !important;
+	--arrowpanel-dimmed-even-further: hsla(0,0%,80%,.8) !important;
+	--urlbar-separator-color: ThreeDLightShadow !important;
+	--chrome-content-separator-color: ThreeDShadow !important;
+	--toolbarbutton-hover-transition-duration: 0 !important;
+	--toolbarbutton-outer-padding: 2px !important;
+	--toolbarbutton-inner-padding: 6px !important;
+	--toolbarbutton-focus-outline: 2px solid currentColor !important;
+	--autocomplete-popup-background: -moz-Field !important;
+	--autocomplete-popup-color: -moz-FieldText !important;
+	--toolbarbutton-hover-background: var(hsla(240,5%,5%,.1)) !important;
+	--toolbarbutton-active-background: var(hsla(240,5%,5%,.15)) !important;
+	--autocomplete-popup-highlight-background: Highlight !important;
+	--autocomplete-popup-highlight-color: HighlightText !important;
+	--arrowpanel-menuitem-border-radius: 0 !important;
+	--arrowpanel-menuitem-padding: 0 !important;
+	--panel-item-hover-bgcolor: Highlight !important;
+	--panel-separator-color: #ACA899 !important;
+}
+
+/*
+  Make things appear "native"
+*/
+
+::placeholder {
+	opacity: 1 !important;
+	color: GrayText !important;
+}
+
+toolbar,
+toolbarbutton.toolbarbutton-1:not(
+#back-button, 
+#forward-button, 
+#history-panelmenu, 
+#reload-button, 
+#stop-button, 
+#tabs-newtab-button, 
+#alltabs-button,
+#tiptab_william_wong-BAP
+),
+#navigator-toolbox,
+#main-menubar > menu
+{
+	border: 0 !important;
+	appearance: auto !important;
+}
+
+.toolbarbutton-icon,
+.toolbarbutton-badge-stack
+{
+	border-radius: 0 !important;
+	background: none !important; 
+	padding: 0 !important;
+}
+
+/*
+  Set Order of Toolbars
+*/
+
+#nav-bar 
+{
+	order: -5 !important;
+}
+
+#toolbar-menubar 
+{
+	order: -3 !important;
+}
+
+#PersonalToolbar
+{
+	order: -2 !important;
+}
+
+#TabsToolbar
+{
+	order: 1 !important;
+}
