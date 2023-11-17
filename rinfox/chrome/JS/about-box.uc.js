@@ -17,7 +17,23 @@ function setAttributes(element, attributes) {
 // Title of About Window
 var aboutDialogTitle = "About Internet Explorer";
 
-const isIE8Enabled = Services.prefs.getBoolPref("rinfox.tweak.ie8");
+// Properly check if the user chose Internet Explorer 7 or Internet Explorer 8 appearance
+//
+// We need to put these "getBool/Int/StringPref" in a try and catch block or
+// Firefox will throw an error if the bool was not yet created by the user (meaning
+// the bool is nonexistent in about:config) cause the code to stop, it's the reason why on
+// fresh installs the aboutDialog would look "half-themed", displaying Firefox icon and
+// information but with a white background. Only userContent was working.
+// - Bruno
+function checkIE8Status() {
+    try {
+        return Services.prefs.getBoolPref("rinfox.tweak.ie8");
+    } catch (error) {
+        return false;
+    }
+}
+
+const isIE8Bool = checkIE8Status();
 
 aboutDialog.setAttribute("title", ""+aboutDialogTitle+"");
 
@@ -26,7 +42,7 @@ aboutDialog.setAttribute("title", ""+aboutDialogTitle+"");
 // Windows Internet Explorer Banner
 const aboutboxbanner = document.createElement("img");
 let bannersrc;
-if (isIE8Enabled) {
+if (isIE8Bool) {
 	bannersrc = "chrome://userchrome/content/images/banner-ie8.png";
 } else {
 	bannersrc = "chrome://userchrome/content/images/banner.png";
@@ -44,7 +60,7 @@ let aboutboxinfoversion;
 let aboutboxinfostregnth;
 let aboutboxinfoid;
 let aboutboxinfoupdate;
-if (isIE8Enabled) {
+if (isIE8Bool) {
 	aboutboxinfoversion = "Version: 8.0.6001.18702";
 	aboutboxinfostregnth = "Cipher Stregnth: 256-bit";
 	aboutboxinfoid = "Product ID: 01404-014-0000025-714000";
@@ -86,7 +102,7 @@ const windowsflagattributes = {
 // Copyright link
 const copyrightlink = document.createElement("a");
 let copyrightlinktext;
-if (isIE8Enabled) {
+if (isIE8Bool) {
 	copyrightLinkText = "©2009 Microsoft Corporation";
 } else {
 	copyrightLinkText = "©2006 Microsoft Corporation";
