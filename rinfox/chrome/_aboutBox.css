@@ -67,7 +67,7 @@ textarea {
 	margin-left: -19px !important;
 }
 	
-@supports -moz-bool-pref("rinfox.tweak.ie8") {
+@supports -moz-bool-pref("RinFox.Appearance.IE8") {
 
 	#aboutDialog,
 	#aboutDialogContainer

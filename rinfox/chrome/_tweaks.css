@@ -1,11 +1,11 @@
   /* Disable "Add-ons" Toolbar Button */
-@supports -moz-bool-pref("rinfox.tweak.disable.addons-button") {
+@supports -moz-bool-pref("RinFox.Option.HideUnifiedExtensions") {
   #unified-extensions-button {
     display: none !important;
   }
 }
 
-@supports -moz-bool-pref("rinfox.tweak.ie8") {
+@supports -moz-bool-pref("RinFox.Appearance.IE8") {
   #navigator-toolbox-background {
     background-color: #F2F6FB !important;
   }
@@ -387,7 +387,7 @@
       border-bottom: 1px solid #B6BCCC !important;
       box-shadow: inset 0 1px 0 #FFF !important;
     }
-    @supports -moz-bool-pref("rinfox.tweak.ie8") {
+    @supports -moz-bool-pref("RinFox.Appearance.IE8") {
       #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) {
         margin-top: 0 !important;
       }

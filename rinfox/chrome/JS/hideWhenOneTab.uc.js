@@ -4,7 +4,6 @@ const tabsToolbar = document.getElementById("TabsToolbar");
 
 if (tabsToolbar) {
 	tabBarObserver.observe(tabsToolbar, { childList: true, subtree: true });
-	hideTabBarItems();
 }
 
 function hideTabBarItems() {

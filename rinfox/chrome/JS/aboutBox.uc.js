@@ -27,7 +27,7 @@ var aboutDialogTitle = "About Internet Explorer";
 // - Bruno
 function checkIE8Status() {
     try {
-        return Services.prefs.getBoolPref("rinfox.tweak.ie8");
+        return Services.prefs.getBoolPref("RinFox.Appearance.IE8");
     } catch (error) {
         return false;
     }
