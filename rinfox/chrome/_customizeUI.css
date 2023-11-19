@@ -31,9 +31,79 @@
   flex: unset !important;
 }
 
-#wrapper-alltabs-button {
+#nav-bar[customizing] > .overflow-button {
+  display: none !important;
+}
+
+#customization-panelWrapper {
+  --panel-arrow-offset: 0 !important;
+}
+
+#customization-header,
+#customization-panelHeader {
+  font-weight: normal !important;
+  font-size: 13pt !important;
+  color: #4465A2 !important;
+  padding-bottom: 13px !important;
+  border-bottom: 1px solid #F3F4F8 !important;
+}
+
+#customization-panelHeader {
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+}
+
+#customization-container {
+  background-image: linear-gradient(to bottom, #FFFFFF, #F3F4F8) !important;
+}
+
+#customization-footer {
+  border-top: 0 !important;
+  background-color: transparent !important;
+  background-image: linear-gradient(to bottom, transparent, #FFF) !important;
+}
+
+.button-menu-dropmarker,
+#customization-panelWrapper > .panel-arrowbox,
+#customization-panelHolder > #widget-overflow-fixed-list::before {
+  display: none !important;
+}
+
+.customizationmode-button[type="menu"] > .box-inherit > .box-inherit > .button-text {
+  padding-inline-end: 0 !important;
+}
+
+#customization-panelWrapper > .panel-arrowcontent {
+  appearance: groupbox !important;
+  box-shadow: none !important;
+  margin-top: 20px !important;
+}
+
+#customization-panelDescription {
+  font-size: unset !important;
+}
+
+#customization-panelHolder > #widget-overflow-fixed-list:not(:empty) {
+  margin-inline: 10px !important;
+  border-top: 1px solid #F3F4F8 !important;
+}
+
+#customization-footer button {
+  appearance: button !important;
+  color: -moz-DialogText !important;
+  font-weight: normal !important;
+  max-height: 26px !important;
+}
+
+#customization-reset-button, #customization-undo-reset-button, #customization-done-button {
+  min-width: 6.3em !important;
+}
+
+#wrapper-alltabs-button,
+#wrapper-tiptab_william_wong-browser-action {
   order: -1 !important;
   opacity: 1 !important;
+  align-self: stretch;
 }
 
 #TabsToolbar #wrapper-tiptab_william_wong-browser-action {

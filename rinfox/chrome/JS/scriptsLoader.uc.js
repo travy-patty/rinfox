@@ -5,7 +5,10 @@
 // @include			main
 // ==/UserScript==
 
+const { ctypes } = ChromeUtils.import("resource://gre/modules/ctypes.jsm");
+
 function executeFunctions() {
+	getAndSetTitleBarHeight();
 	moveBookmarksBar();
 	hideTabBarItems();
 	changeLibraryButtonText();
@@ -13,6 +16,7 @@ function executeFunctions() {
 	changeUnifiedExtensionsText();
 	changeSearchBarPlaceholder();
 	createHelpButton();
+	convertCheckboxesToNativeLook()
 	launchRinFoxWizard();
     console.info("Functions executed.");
 }

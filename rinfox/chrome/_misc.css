@@ -16,10 +16,58 @@
   box-shadow: none !important;
 }
 
+/* Style Toolbar Separators */
 
 toolbarseparator {
   appearance: none !important;
   border-left: 1px solid ThreeDShadow !important;
   border-right: 1px solid ThreeDHighlight !important;
   margin: 2px !important;
+}
+
+/* Fake "Native" Titlebar */
+
+@media (-moz-platform: windows-win7), (-moz-platform: windows-win8), (-moz-windows-glass), (-moz-windows-default-theme) {
+  @media not (-moz-windows-classic: 1) {
+    @media not (-moz-windows-compositor: 0) {
+     .titlebar-spacer
+     {
+       display: none !important;
+     }
+
+     :root[tabsintitlebar] #titlebar
+     {
+       appearance: none !important;
+     }
+
+     :root[tabsintitlebar] #nav-bar
+     {
+       padding-left: 2px !important;
+       padding-right: 2px !important;
+       padding-top: calc(var(--titlebar-height) + 10px) !important;
+      }
+      :root[tabsintitlebar]  #titlebar::after {
+        height: calc(100% - var(--titlebar-height) - 41px) !important;
+        top: calc(var(--titlebar-height) + 39px) !important;
+      }
+      #TabsToolbar > .titlebar-buttonbox-container {
+        right: 0 !important;
+        top: 0 !important;
+        position: fixed !important;
+      }
+      :root .titlebar-buttonbox {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+      }
+      :root[sizemode="maximized"] #nav-bar {
+        padding-right: 0 !important;
+        padding-top: calc(var(--titlebar-height) + 14px) !important;
+      }
+      :root[sizemode="maximized"] #titlebar::after {
+        height: calc(100% - var(--titlebar-height) - 45px) !important;
+        top: calc(var(--titlebar-height) + 43px) !important;
+      }
+    } 
+  }
 }

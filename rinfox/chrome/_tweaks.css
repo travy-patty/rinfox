@@ -48,6 +48,10 @@
     padding-inline: 7px 11px !important;
     gap: 5px !important;
   }
+  #TabsToolbar #library-button {
+    margin-left: -5px !important;
+    margin-right: 10px !important;  
+  }
   #library-button > .toolbarbutton-text {
     background-color: transparent !important;
     padding: 0 !important;
@@ -404,6 +408,9 @@
       #TabsToolbar:not(:-moz-lwtheme) {
         padding-inline: 7px !important;
         background-color: #E3EEFB !important;
+        background-image: linear-gradient(to bottom, #F2F7FD 0%, #E9F2FC 25%, #E3EEFB 25%) !important;
+      }
+      #PersonalToolbar[collapsed="false"] + #TabsToolbar:not(:-moz-lwtheme) {
         background-image: none !important;
       }
       #tiptab_william_wong-browser-action {
