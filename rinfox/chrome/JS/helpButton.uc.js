@@ -1,3 +1,10 @@
+// ==UserScript==
+// @name			Help Button
+// @description 	Adds help button
+// @author			Travis
+// @include			main
+// ==/UserScript==
+
 Components.utils.import("resource:///modules/CustomizableUI.jsm");
 var {Services} = Components.utils.import("resource://gre/modules/Services.jsm", {});
 var sss = Components.classes["@mozilla.org/content/style-sheet-service;1"].getService(Components.interfaces.nsIStyleSheetService);

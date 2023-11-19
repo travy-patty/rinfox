@@ -1,3 +1,10 @@
+// ==UserScript==
+// @name			Change Toolbar Labels
+// @description 	Changes the label of Toolbar Buttons
+// @author			Travis
+// @include			main
+// ==/UserScript==
+
 const TabToolbarCustomization = document.getElementById("TabsToolbar-customization-target");
 
 function changeLibraryButtonText() {

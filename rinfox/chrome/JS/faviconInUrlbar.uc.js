@@ -1,3 +1,10 @@
+// ==UserScript==
+// @name			Favicon In UrlBar
+// @description 	Adds Favicon of the current website to the UrlBar
+// @author			Travis
+// @include			main
+// ==/UserScript==
+
 var default_favicon = 'chrome://userchrome/content/images/ie_page.png';
 
 var FaviconInUrlbar = {

@@ -1,3 +1,10 @@
+// ==UserScript==
+// @name			Hide When One Tab
+// @description 	Hides Tip Tab and All Tabs button when there's only one tab
+// @author			Travis
+// @include			main
+// ==/UserScript==
+
 const tabBarItems = ["#alltabs-button", "#tiptab_william_wong-BAP"]; // DOM Elements that will be hidden when there's one tab
 const tabBarObserver = new MutationObserver(hideTabBarItems);
 const tabsToolbar = document.getElementById("TabsToolbar");

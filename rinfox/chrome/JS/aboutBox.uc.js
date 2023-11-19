@@ -1,4 +1,7 @@
 // ==UserScript==
+// @name			About Box
+// @description 	Changes aboutDialog to look like Internet Explorer's
+// @author			Travis
 // @include			chrome://browser/content/aboutDialog.xhtml
 // @exclude			main
 // ==/UserScript==

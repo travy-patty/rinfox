@@ -1,3 +1,10 @@
+// ==UserScript==
+// @name			Restore 'Space & Separator' items
+// @description 	Restore 'Space & Separator' items
+// @author			Aris
+// @include			main
+// ==/UserScript==
+
 // Restore 'Space & Separator' items script for Firefox 60+ by Aris
 //
 // Default browser scripts always remove spaces and separators from default palette, so

@@ -1,3 +1,10 @@
+// ==UserScript==
+// @name			Scripts Loader
+// @description 	Loads resources required for RinFox
+// @author			Travis
+// @include			main
+// ==/UserScript==
+
 function executeFunctions() {
 	moveBookmarksBar();
 	hideTabBarItems();
