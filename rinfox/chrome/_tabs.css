@@ -95,6 +95,9 @@
 }
 
 #tabbrowser-tabs {
+  border-inline-start: 0 !important;
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
   margin-left: -1px !important;
 }
 
@@ -162,8 +165,16 @@
   z-index: 1 !important;
 }
 
+.tabbrowser-tab:not([pinned]) {
+  transition: none !important;
+}
+
 .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]):only-of-type {
   max-width: 299px !important
+}
+
+.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]):only-of-type .tab-close-button {
+  display: none !important;
 }
 
 :root:not([uidensity="compact"]) .tab-content[pinned] {
@@ -199,26 +210,34 @@
   border: 0 !important;
 }
 
+#TabsToolbar-customization-target 
+{
+  align-items: center !important;
+}
+
 
 /* Tip Tab Extension */
 #tiptab_william_wong-browser-action {
   order: -1 !important;
-  padding-block: 5px 2px !important;
+  padding-block: 4px 2px !important;
   margin-inline: -1px !important;
   margin-left: 8px !important;
+  align-self: stretch !important;
 }
 
 #TabsToolbar #tiptab_william_wong-BAP {
   width: 24px !important;
   list-style-image: url('images/all-tabs-preview.png') !important;
   height: 100% !important;
+  align-self: stretch !important;
 }
 
 /* New Tab Button */
 #tabs-newtab-button {
+  width: 30px !important;
+  max-height: 100% !important;
   margin-top: 4px !important;
   list-style-image: none !important;
-  width: 30px !important;
 }
 
 #tabs-newtab-button:hover {
@@ -255,6 +274,7 @@
   order: -1 !important;
   margin-top: 4px !important;
   list-style-image: url('images/chevron.png') !important;
+  align-self: stretch !important;
 }
 
 #alltabs-button .toolbarbutton-badge-stack,

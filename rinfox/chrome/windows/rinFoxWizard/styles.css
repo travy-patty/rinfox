@@ -1,0 +1,99 @@
+* {
+	box-sizing: border-box;
+}
+
+window {
+	width: 603px;
+	height: 423px;
+	background-image: url('chrome://userchrome/content/windows/rinFoxWizard/background.png');
+}
+
+#contentArea {
+	width: 100%;
+	height: 100%;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+	display: none;
+	flex: 1;
+	flex-direction: column;
+}
+
+commandlinkbutton {
+	display: flex;
+	flex-direction: column;
+	appearance: toolbarbutton;
+	padding: 10px 15px;
+	color: rgb(21, 28, 85);
+	font-size: 11pt;
+}
+
+.commandLinkButtonThumbnail {
+	width: 165px;
+	height: 165px;
+	box-shadow: 0 0 2px rgb(0 0 0 / 50%);
+}
+
+.commandlinkbutton-glyph {
+	min-width: 20px;
+	min-height: 20px;
+	width: 20px;
+	height: 20px;
+	background-image: url('chrome://userchrome/content/windows/rinFoxWizard/Normal.ico');
+	background-size: 20px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.commandLinkLabel {
+	margin-top: 10px;
+}
+
+.headerContainer {
+	height: 123px;
+	align-items: center;
+	margin-inline: 130px;
+}
+
+.wizardHeader {
+	color: #0033AB;
+	font-size: 14pt;
+}
+
+.wizardSecondaryHeader {
+	font-size: 12pt;
+	margin-inline: 52px;
+	margin-block: 20px;
+}
+
+.welcomeContainer .wizardSecondaryHeader {
+	margin-bottom: 0;
+}
+
+.appearanceOptionContent {	
+	width: 498px;
+	justify-content: space-evenly;
+	margin-inline: 52px;
+}
+
+.restartContainer {
+	margin-inline: 52px;
+}
+
+.dialogFooter {
+	justify-content: flex-end;
+	align-items: center;
+	margin-inline: 21px;
+	margin-block: 18px;
+	margin-top: auto;
+}
+
+.dialogFooter button {
+	min-width: 68px;
+	width: 0;
+	height: 27px;
+	justify-content: center;
+	align-items: center;
+}

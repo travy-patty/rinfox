@@ -5,6 +5,8 @@
 
 #configuration_toolbar {
   margin-inline: 2px !important;
+  background-image: linear-gradient(to bottom, #FFFFFF 0%, #E5EAF5 50%, #CFD7EB 50%, #E9ECFA 100%) !important;
+  border-bottom: 1px solid #B6BCCC !important;
 }
 
 #wrapper-back-button,
