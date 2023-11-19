@@ -94,10 +94,14 @@
   margin-bottom: 2px !important;
 }
 
+#tabbrowser-tabs {
+  margin-left: -1px !important;
+}
+
 .tabbrowser-tab { 
   min-height: calc(var(--tab-min-height) - 4px) !important;
   margin-top: 4px !important;
-  margin-inline: -1px !important;
+  margin-right: -1px !important;
   padding: 0 !important;
 }
 
@@ -155,7 +159,11 @@
 }
 
 .tabbrowser-tab[visuallyselected=true] {
-  z-index: 1!important;
+  z-index: 1 !important;
+}
+
+.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]):only-of-type {
+  max-width: 299px !important
 }
 
 :root:not([uidensity="compact"]) .tab-content[pinned] {

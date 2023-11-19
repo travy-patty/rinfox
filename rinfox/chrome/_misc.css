@@ -15,3 +15,11 @@
   padding: 0 !important;
   box-shadow: none !important;
 }
+
+
+toolbarseparator {
+  appearance: none !important;
+  border-left: 1px solid ThreeDShadow !important;
+  border-right: 1px solid ThreeDHighlight !important;
+  margin: 2px !important;
+}

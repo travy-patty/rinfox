@@ -1,3 +1,12 @@
+#customization-container {
+  margin: 2px !important;
+  margin-top: 0 !important;
+}
+
+#configuration_toolbar {
+  margin-inline: 2px !important;
+}
+
 #wrapper-back-button,
 #wrapper-forward-button,
 #wrapper-urlbar-container
@@ -25,14 +34,14 @@
   opacity: 1 !important;
 }
 
-#wrapper-tiptab_william_wong-browser-action {
+#TabsToolbar #wrapper-tiptab_william_wong-browser-action {
   order: -2 !important;
 }
 
-#wrapper-bookmarks-menu-button {
+#TabsToolbar #wrapper-bookmarks-menu-button {
   order: -3 !important;
 }
 
-#wrapper-library-button {
+#TabsToolbar #wrapper-library-button {
   order: -4 !important;
 }

@@ -19,6 +19,7 @@
     background-color: #E3EEFB !important;
     background-image: none !important;
     box-shadow: inset 1px 0 0 #FEFEFE, inset -1px 0 0 #FEFEFE, inset 0 1px 0 #FEFEFE !important;
+    border-color: 1px solid #A3A7AC !important;
   }
   .tabbrowser-tab:not([visuallyselected=true]):hover .tab-background,
   #tabs-newtab-button:hover,
@@ -28,7 +29,9 @@
   }
   .tabbrowser-tab[visuallyselected=true] .tab-background::before, 
   .tabbrowser-tab[visuallyselected=true] .tab-background::after {
+    height: 4px !important;
     background-image: url('images/tab-corners-ie8.png') !important;
+    border-bottom: 1px solid #F2F6FB !important;
   }
   #PanelUI-menu-button .toolbarbutton-icon,
   #unified-extensions-button .toolbarbutton-icon
@@ -334,9 +337,9 @@
     #main-menubar > menu {
       appearance: none !important;
     }
-    #toolbar-menubar[autohide="true"][inactive="true"]:not([customizing="true"]) {
-      margin-top: -2px !important;
-      opacity: 0 !important;
+    #toolbar-menubar[inactive="true"]:not([customizing="true"]) {
+      max-height: 0 !important;
+      padding: 0 !important;
       border: 0 !important;
     }
     #menubar-items {
@@ -409,11 +412,15 @@
         border-bottom: 1px solid #9196A2 !important;
         padding: 0 2px !important;
       }
-      #PersonalToolbar {
+      #PersonalToolbar,
+      #toolbar-menubar[autohide="true"][inactive="true"] + #PersonalToolbar {
         padding-inline: 2px !important;
         padding-block: 2px 1px !important;
         box-shadow: inset 1px 0 0 #FFF, inset -1px 0 0 #FFF, inset 0 1px 0 #FFF !important;
         background-image: linear-gradient(to bottom, #F2F7FD 0%, #E9F2FC 50%, #E3EEFB 50%) !important;
+      }
+      #toolbar-menubar + #PersonalToolbar {
+        border-bottom: 0 !important;
       }
       .search-go-button {
         list-style-image: url('images/search-7.png') !important;
