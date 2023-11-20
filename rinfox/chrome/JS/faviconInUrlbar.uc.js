@@ -14,7 +14,7 @@ var FaviconInUrlbar = {
 	var favimginurlbar = document.createElement("img");
 	favimginurlbar.setAttribute("id","favimginurlbar");  
 	
-	document.getElementById('identity-box').appendChild(favimginurlbar);
+	document.getElementById('urlbar-input-container').insertBefore(favimginurlbar, document.getElementById('identity-box'));
 
 	document.addEventListener("TabAttrModified", updateIcon, false);
 	document.addEventListener('TabSelect', updateIcon, false);

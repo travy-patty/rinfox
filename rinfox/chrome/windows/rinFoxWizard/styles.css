@@ -33,7 +33,7 @@ commandlinkbutton {
 .commandLinkButtonThumbnail {
 	width: 165px;
 	height: 165px;
-	box-shadow: 0 0 2px rgb(0 0 0 / 50%);
+	box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
 }
 
 .commandlinkbutton-glyph {
@@ -92,6 +92,7 @@ commandlinkbutton {
 
 .dialogFooter button {
 	min-width: 68px;
+	max-width: 100%;
 	width: 0;
 	height: 27px;
 	justify-content: center;

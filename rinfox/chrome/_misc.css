@@ -25,6 +25,109 @@ toolbarseparator {
   margin: 2px !important;
 }
 
+/* Style Panels */
+/* Site information Panel */
+
+.panel-header {
+  padding: 14px 18px !important;
+  justify-content: flex-start !important;
+}
+
+.panel-header > h1 {
+  font-size: 11pt !important;
+  color: #4465A2 !important;
+	font-weight: 500 !important;
+  flex: unset !important;
+}
+
+.panel-header + toolbarseparator {
+  display: none !important;
+}
+
+#identity-popup-mainView-panel-header::before,
+#identity-popup-securityView .panel-header::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  min-width: 32px !important;
+  background-image: url('images/web_identity.png');
+  margin-inline-end: 7px !important;
+}
+
+#identity-popup-clear-sitedata-footer,
+#identity-popup-more-info-footer {
+  margin-bottom: 0 !important;
+  border-top: 1px solid #E3E3E3 !important;
+  box-shadow: inset 0 1px 0 #F9F9F9 !important;
+  background-color: #F0F0F0 !important;
+  padding-block: 9px !important;
+  padding-block-end: 10px !important;
+}
+
+#identity-popup-clear-sitedata-footer toolbarbutton, #identity-popup-security-button,
+#identity-popup-more-info-footer toolbarbutton {
+  margin: 0 !important;
+  background-color: transparent !important;
+  min-height: unset !important;
+  color: darkblue !important;
+}
+
+#identity-popup-clear-sitedata-footer:hover,
+#identity-popup-security-button:hover,
+#identity-popup-more-info-footer:hover {
+  text-decoration: underline !important;
+  cursor: pointer !important;
+}
+
+#identity-popup-clear-sitedata-footer toolbarbutton .toolbarbutton-text,
+#identity-popup-more-info-footer toolbarbutton .toolbarbutton-text {
+  text-align: center !important;
+}
+
+#identity-popup-clear-sitedata-footer toolbarseparator,
+#identity-popup-security-button::after,
+#identity-popup-more-info-footer toolbarseparator,
+#identity-popup-securityView .subviewbutton-back {
+  display: none !important;
+}
+
+#identity-popup-mainView[footerVisible="true"] > .panel-subview-body {
+  padding: 17px 20px !important;
+  padding-top: 4px !important;
+}
+
+#identity-popup-securityView {
+  color: #3B3B3B !important;
+}
+
+.identity-popup-section {
+  margin-inline: 0 !important;
+  padding-inline: 20px !important;
+}
+
+#identity-popup-securityView-extended-info {
+  margin-bottom: 5px !important;
+}
+
+.panel-header:not(.panel-header-with-info-button) > .subviewbutton-back + h1 {
+  margin-inline-end: 0 !important;
+}
+
+#suggestedsites_bruni_com-BAP {
+  padding: 0 4px !important;
+  color: GrayText !important;
+}
+
+#suggestedsites_bruni_com-BAP .toolbarbutton-icon {
+  list-style-image: url('images/blank-page.png') !important;
+}
+
+#suggestedsites_bruni_com-BAP .toolbarbutton-text {
+  display: flex !important;
+  background-color: transparent !important;
+}
+
 /* Fake "Native" Titlebar */
 
 @media (-moz-platform: windows-win7), (-moz-platform: windows-win8), (-moz-windows-glass), (-moz-windows-default-theme) {

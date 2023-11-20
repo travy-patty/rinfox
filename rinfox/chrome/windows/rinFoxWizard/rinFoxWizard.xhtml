@@ -28,16 +28,16 @@
 					</vbox>
 				</vbox>
 				<hbox class="dialogFooter">
-					<button id="backButton" disabled="true">
-						<hbox class="box-inherit button-box" align="center" pack="center" flex="1" anonid="button-box">
-							<image class="button-icon"/>
-							<label class="button-text">Back</label>
-						</hbox>
-					</button>
 					<button onclick="showPage(1)">
 						<hbox class="box-inherit button-box" align="center" pack="center" flex="1" anonid="button-box">
 							<image class="button-icon"/>
 							<label class="button-text">Next</label>
+						</hbox>
+					</button>
+					<button style="width:109px;" onclick="window.close();">
+						<hbox class="box-inherit button-box" align="center" pack="center" flex="1" anonid="button-box">
+							<image class="button-icon"/>
+							<label class="button-text">Ask me later</label>
 						</hbox>
 					</button>
 				</hbox>
@@ -75,6 +75,17 @@
 			</html:div>
 			
 			<html:div id="page2" class="page">
+				<vbox class="pageContent">
+					<hbox class="headerContainer">
+						<h1 class="wizardHeader">Choose your settings</h1>
+					</hbox>
+					<hbox>
+						<h2 class="wizardSecondaryHeader">Before you get started, choose your settings:</h2>
+					</hbox>
+				</vbox>
+			</html:div>
+			
+			<html:div id="page3" class="page">
 				<vbox class="pageContent">
 					<hbox class="headerContainer">
 						<h1 class="wizardHeader">Thank you for choosing RinFox</h1>

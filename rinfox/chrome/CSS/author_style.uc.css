@@ -1,0 +1,16 @@
+/* ==UserScript==
+// @description    author style injected to browser.xhtml
+// @usefileuri
+// @name  fuck shadow dom
+// ==/UserScript==*/
+
+/* Default to xul namespace */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#identity-popup::part(content) {
+	background-color: #FFFFFF !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	max-width: 100% !important;
+	border: 1px solid #646464 !important;
+}

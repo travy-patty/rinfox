@@ -23,7 +23,6 @@
 }
 
 #urlbar-background,
-#identity-icon-box,
 .searchbar-search-button:hover:not([addengines="true"]) > .searchbar-search-icon-overlay,
 #urlbar[breakout][breakout-extend] #urlbar-go-button,
 .search-panel-header,
@@ -38,6 +37,7 @@
 
 #urlbar-input-container {
   padding: 0 !important;
+  border-right: 0 !important;
 }
 
 #urlbar-input::placeholder, 
@@ -58,7 +58,7 @@
   content: url('images/ie_page.png') !important; 
 }
 
-#identity-box 
+#favimginurlbar
 {
   margin-inline-end: 3px !important;
 }
@@ -117,13 +117,14 @@
 
 #urlbar::after {
   content: '' !important;
-  display: inline-block !important;
+  display: none !important;
   appearance: -moz-menulist-arrow-button !important;
   width: 18px !important;
   height: 26px !important;
   position: absolute !important;
   top: 0 !important;
   right: 0 !important;
+  opacity: 0 !important;
 }
 
 .urlbarView-row {
@@ -413,4 +414,8 @@
   --panel-border-color: #D4D0C8 !important;
   --panel-border-radius: 0 !important;
   --panel-padding: 0 !important;
+}
+
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button {
+  display: none !important;
 }
