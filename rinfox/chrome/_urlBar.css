@@ -128,13 +128,15 @@
 }
 
 .urlbarView-row {
+  border: 0 !important;
+  margin-inline: 2px !important;
   min-height: 20px !important;
 }
 
 .urlbarView-row-inner {
   min-height: 20px !important;
   padding-block: 0 !important;
-  padding-inline: 6px !important;
+  padding-inline: 25px !important;
 }
 
 .urlbarView-row[row-selectable]:not([selected]):hover {
@@ -166,6 +168,8 @@
   background-image: url('images/remove-search-suggestion.png') !important;
   background-position-x: 0 !important;
   margin-right: 13px !important;
+  right: 0 !important;
+  position: absolute !important;
 }
 
 .urlbarView-button:hover {
@@ -176,9 +180,19 @@
   background-position-x: -32px !important;
 }
 
+.urlbarView-favicon,
+.urlbarView-type-icon,
+.urlbarView-action {
+  display: none !important;
+}
+
 #urlbar .searchbar-engine-one-off-item {
   min-width: 22px !important;
   height: 22px !important;
+}
+
+.search-panel-one-offs {
+  gap: 4px !important;
 }
 
 #urlbar-engine-one-off-item-bookmarks {
@@ -262,8 +276,23 @@
   font-size: unset !important;
 }
 
+.urlbarView-url {
+  color: GrayText !important;
+  flex-basis: 50% !important;
+}
+
+.urlbarView-no-wrap {
+  max-width: 50% !important;
+  flex-basis: 50% !important;
+}
+
+.urlbarView-url strong {
+  color: Highlight !important;
+  font-weight: 500 !important;
+}
+
 .urlbarView-title-separator::before {
-  content: "-" !important;
+  content: none !important;
 }
 
 .searchbar-engine-one-off-add-engine:not([image]), moz-input-box > menupopup .context-menu-add-engine:not([image]) {

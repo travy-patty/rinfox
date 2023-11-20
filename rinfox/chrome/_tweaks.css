@@ -15,7 +15,8 @@
   .tab-background,
   #tabs-newtab-button,
   #alltabs-button,
-  #TabsToolbar #tiptab_william_wong-BAP
+  #TabsToolbar #tiptab_william_wong-BAP,
+  #scrollbutton-up, #scrollbutton-down
   {
     background-color: #E3EEFB !important;
     background-image: none !important;
@@ -25,7 +26,8 @@
   .tabbrowser-tab:not([visuallyselected=true]):hover .tab-background,
   #tabs-newtab-button:hover,
   #alltabs-button:hover,
-  #TabsToolbar #tiptab_william_wong-BAP:hover
+  #TabsToolbar #tiptab_william_wong-BAP:hover,
+  #scrollbutton-up:hover, #scrollbutton-down:hover
   {
     background-image: linear-gradient(to bottom, #A3C9F8 0%, #EEF3FA 100%) !important;
   }
@@ -59,6 +61,9 @@
     display: flex !important;
     align-items: center !important;
     margin-bottom: 2px !important;
+  }
+  #bookmarks-menu-button {
+    list-style-image: url('images/add-favorite-ie8.png') !important;
   }
 }
 
@@ -362,13 +367,13 @@
       z-index: 0 !important;
     }
     .searchbar-search-button[addengines="true"] > .searchbar-search-icon {
-      transform: translateX(-2px) !important;
+      transform: translateX(-1px) !important;
     }
     .searchbar-search-button:hover .searchbar-search-icon-overlay {
       display: none !important;
     } 
-    .searchbar-search-button:hover .searchbar-search-icon {
-      transform: translateX(-1px) !important;
+    .searchbar-search-button[addengines="true"]:hover .searchbar-search-icon {
+      transform: translateX(0) !important;
     }
     #personal-toolbar-empty-description, toolbarbutton.bookmark-item:not(.subviewbutton) {
       appearance: toolbarbutton !important;

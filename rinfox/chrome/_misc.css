@@ -56,7 +56,8 @@ toolbarseparator {
 }
 
 #identity-popup-clear-sitedata-footer,
-#identity-popup-more-info-footer {
+#identity-popup-more-info-footer,
+#unified-extensions-manage-extensions {
   margin-bottom: 0 !important;
   border-top: 1px solid #E3E3E3 !important;
   box-shadow: inset 0 1px 0 #F9F9F9 !important;
@@ -73,22 +74,31 @@ toolbarseparator {
   color: darkblue !important;
 }
 
+#unified-extensions-manage-extensions {
+  margin: 0 !important;
+  min-height: unset !important;
+  color: darkblue !important;
+}
+
 #identity-popup-clear-sitedata-footer:hover,
 #identity-popup-security-button:hover,
-#identity-popup-more-info-footer:hover {
+#identity-popup-more-info-footer:hover,
+#unified-extensions-manage-extensions:hover {
   text-decoration: underline !important;
   cursor: pointer !important;
 }
 
 #identity-popup-clear-sitedata-footer toolbarbutton .toolbarbutton-text,
-#identity-popup-more-info-footer toolbarbutton .toolbarbutton-text {
+#identity-popup-more-info-footer toolbarbutton .toolbarbutton-text,
+#unified-extensions-manage-extensions .toolbarbutton-text {
   text-align: center !important;
 }
 
 #identity-popup-clear-sitedata-footer toolbarseparator,
 #identity-popup-security-button::after,
 #identity-popup-more-info-footer toolbarseparator,
-#identity-popup-securityView .subviewbutton-back {
+#identity-popup-securityView .subviewbutton-back,
+#unified-extensions-view toolbarseparator {
   display: none !important;
 }
 
@@ -120,7 +130,7 @@ toolbarseparator {
 }
 
 #suggestedsites_bruni_com-BAP .toolbarbutton-icon {
-  list-style-image: url('images/blank-page.png') !important;
+  list-style-image: url('images/ie_page.png') !important;
 }
 
 #suggestedsites_bruni_com-BAP .toolbarbutton-text {

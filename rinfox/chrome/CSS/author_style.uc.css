@@ -7,10 +7,23 @@
 /* Default to xul namespace */
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-#identity-popup::part(content) {
+#identity-popup::part(content),
+#unified-extensions-panel::part(content) {
 	background-color: #FFFFFF !important;
 	border-radius: 0 !important;
 	box-shadow: none !important;
 	max-width: 100% !important;
 	border: 1px solid #646464 !important;
+}
+
+#customizationui-widget-panel[viewId="PanelUI-webext-suggestedsites_bruni_com-BAV"]::part(content) {
+	box-shadow: none !important;
+	border-radius: 3px !important;
+	border: 1px solid #AFB8CA !important;
+	background-color: #F8F8F8 !important;
+	padding: 4px !important;
+}
+
+.cui-widget-panelview[id^="PanelUI-webext-"] {
+	border-radius: 0 !important;
 }

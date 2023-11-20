@@ -117,7 +117,8 @@
 .tab-background,
 #tabs-newtab-button,
 #alltabs-button,
-#TabsToolbar #tiptab_william_wong-BAP
+#TabsToolbar #tiptab_william_wong-BAP,
+#scrollbutton-up, #scrollbutton-down
 {
   background-image: linear-gradient(to bottom, #F2F5FA 0%, #E5EAF5 25%, #CFD7EB 25%, #ECEEFC 100%) !important;
   box-shadow: inset 1px 0 0 #F6FAFF, inset -1px 0 0 #F6FAFF, inset 0 1px 0 #F6FAFF !important;
@@ -133,7 +134,8 @@
 .tabbrowser-tab:not([visuallyselected=true]):hover .tab-background,
 #tabs-newtab-button:hover,
 #alltabs-button:hover,
-#TabsToolbar #tiptab_william_wong-BAP:hover
+#TabsToolbar #tiptab_william_wong-BAP:hover,
+#scrollbutton-up:hover, #scrollbutton-down:hover
 {
   background-image: linear-gradient(to bottom, #EDF3FC 0%, #C6DDF7 25%, #99C6EE 25%, #B0D3F0 75%, #D9E9F9 100%) !important;
 }
@@ -297,4 +299,16 @@
 
 #TabsToolbar #bookmarks-menu-button {
   order: -1 !important;
+}
+
+/* Tab Scroll Buttons */
+#scrollbutton-up, #scrollbutton-down {
+  margin-top: 4px !important;
+  width: 21px !important;
+  padding: 0 !important;
+  list-style-image: url('images/overflow.png') !important;
+}
+
+spacer[part="overflow-end-indicator"] {
+  display: none !important;
 }
