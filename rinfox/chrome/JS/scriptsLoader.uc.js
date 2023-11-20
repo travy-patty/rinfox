@@ -17,7 +17,7 @@ function executeFunctions() {
 	changeSearchBarPlaceholder();
 	createHelpButton();
 	convertCheckboxesToNativeLook()
-	launchRinFoxWizard();
+	// launchRinFoxWizard();
     console.info("Functions executed.");
 }
 
