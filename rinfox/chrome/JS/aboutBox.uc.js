@@ -90,6 +90,7 @@ for (i = 0; i <= aboutboxinfo.length - 1; i++) {
 // Text Area Legal Notice
 const legalnotice = document.createElement('textarea');
 const legalnoticestring = document.createTextNode("Warning: This computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law.");
+legalnotice.setAttribute("readonly", "true");
 legalnotice.appendChild(legalnoticestring);
 
 

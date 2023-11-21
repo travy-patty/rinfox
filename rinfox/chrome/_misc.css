@@ -45,7 +45,8 @@ toolbarseparator {
 }
 
 #identity-popup-mainView-panel-header::before,
-#identity-popup-securityView .panel-header::before {
+#identity-popup-securityView .panel-header::before,
+#unified-extensions-view .panel-header::before {
   content: '';
   display: inline-block;
   width: 32px;
@@ -53,6 +54,10 @@ toolbarseparator {
   min-width: 32px !important;
   background-image: url('images/web_identity.png');
   margin-inline-end: 7px !important;
+}
+
+#unified-extensions-view .panel-header::before {
+  background-image: url('images/addons-32.png');
 }
 
 #identity-popup-clear-sitedata-footer,
@@ -98,7 +103,10 @@ toolbarseparator {
 #identity-popup-security-button::after,
 #identity-popup-more-info-footer toolbarseparator,
 #identity-popup-securityView .subviewbutton-back,
-#unified-extensions-view toolbarseparator {
+#unified-extensions-view toolbarseparator,
+.unified-extensions-item-message-deck,
+#unified-extensions-area toolbarbutton::after,
+#unified-extensions-area .toolbarbutton-text {
   display: none !important;
 }
 
@@ -138,6 +146,29 @@ toolbarseparator {
   background-color: transparent !important;
 }
 
+#unified-extensions-area toolbaritem {
+  margin: 0 10px 5px 10px!important;
+}
+
+#unified-extensions-area toolbarbutton {
+  appearance: toolbarbutton !important;
+  background-color: transparent !important;
+  padding: 4px 5px !important;
+}
+
+#unified-extensions-area toolbarbutton {
+  height: 100% !important;
+  color: revert !important;
+}
+
+.unified-extensions-item .webextension-browser-action.subviewbutton > .toolbarbutton-badge-stack {
+  margin-inline-end: 2px !important;
+}
+
+.unified-extensions-item-menu-button.subviewbutton {
+  list-style-image: url('images/settings.png') !important;
+}
+
 /* Fake "Native" Titlebar */
 
 @media (-moz-platform: windows-win7), (-moz-platform: windows-win8), (-moz-windows-glass), (-moz-windows-default-theme) {
@@ -173,11 +204,11 @@ toolbarseparator {
         top: 0 !important;
         right: 0 !important;
       }
-      :root[sizemode="maximized"] #nav-bar {
+      :root[tabsintitlebar][sizemode="maximized"] #nav-bar {
         padding-right: 0 !important;
         padding-top: calc(var(--titlebar-height) + 14px) !important;
       }
-      :root[sizemode="maximized"] #titlebar::after {
+      :root[tabsintitlebar][sizemode="maximized"] #titlebar::after {
         height: calc(100% - var(--titlebar-height) - 45px) !important;
         top: calc(var(--titlebar-height) + 43px) !important;
       }
