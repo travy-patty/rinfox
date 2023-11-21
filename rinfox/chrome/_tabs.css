@@ -74,7 +74,7 @@
   height: unset !important;
 }
 
-.tabbrowser-tab:not([pinned]) {
+.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
   max-width: 180px !important;
 }
 
@@ -168,8 +168,8 @@
   z-index: 1 !important;
 }
 
-.tabbrowser-tab:not([pinned]) {
-  transition: none !important;
+.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]) {
+  transition: min-width 0ms linear, max-width 1ms linear !important; /* Disable animations while not breaking bookmarks bar (max-width animation) */
 }
 
 .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]):only-of-type {
