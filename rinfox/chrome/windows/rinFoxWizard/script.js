@@ -45,15 +45,81 @@ function showPage(pageNumber) {
     updateNavBackButton()
 }
 
+var chosenIEAppearance = 0;
+
+function setOptions() {
+    let isRinFoxFirstRunFinished = false;
+    try {
+        isRinFoxFirstRunFinished = Services.prefs.getBoolPref("RinFox.parameter.isFirstRunFinished");
+    } catch (error) {}
+
+    if (!isRinFoxFirstRunFinished) {
+        Services.prefs.setBoolPref('toolkit.legacyUserProfileCustomizations.stylesheets', true);        // Enables chrome themes;
+        Services.prefs.setIntPref('browser.display.windows.non_native_menus', 0);                       // Disables non-native menus;
+        Services.prefs.setBoolPref('widget.non-native-theme.enabled', false);                           // Disables non-native-looking controls;
+        Services.prefs.setBoolPref('browser.tabs.tabmanager.enabled', false);                           // Removes tabs dropdown;
+        Services.prefs.setBoolPref('browser.theme.dark-private-windows', false);                        // Disables dark theme in Private window;
+        Services.prefs.setBoolPref('nglayout.enable_drag_images', false);                               // Disables thumbnail preview when dragging tab;
+        Services.prefs.setIntPref('browser.newtabpage.activity-stream.topSitesRows', 2);                // Enables two rows for the new tab page;
+        Services.prefs.setBoolPref('browser.taskbar.previews.enable', true);                            // Enables taskbar tabs previews;
+        Services.prefs.setBoolPref('browser.download.always_ask_before_handling_new_types', true);      // Enables legacy download dialog;
+        Services.prefs.setIntPref('security.dialog_enable_delay', 0);                                   // Disables OK button delay in the legacy download dialog.
+
+        Services.prefs.setBoolPref('RinFox.parameter.isFirstRunFinished', true)
+    }
+	
+	switch (chosenIEAppearance) {
+	case 0:
+		// IE7
+		Services.prefs.setBoolPref('RinFox.Appearance.IE8', false)
+		break;
+	case 1:
+		// IE8
+		Services.prefs.setBoolPref('RinFox.Appearance.IE8', true)
+		break;
+    }
+	
+	switch (hideInnerBorders) {
+	case 0:
+		// Show Inner Borders
+		Services.prefs.setBoolPref('RinFox.Option.HideInnerBorders', false)
+		break;
+	case 1:
+		// Hide Inner Borders
+		Services.prefs.setBoolPref('RinFox.Option.HideInnerBorders', true)
+		break;
+    }
+}
+
+function checkForExpress() {
+	let group = document.querySelector("radiogroup");
+	let sel = group.querySelector("[selected=\"true\"]").id;
+
+	if (sel == "expressSettings")
+	{
+		hideInnerBorders = 0;
+		
+		showPage(4);
+	}
+	else if (sel == "customSettings")
+	{
+		showPage(3);
+	}
+}
+
 showPage(currentPage);
 updateNavBackButton();
 
 var restartNow = document.getElementById('restartNow');
 restartNow.addEventListener("click", function() {
+	setOptions();
+	
     _ucUtils.restart(true);
 }); 
 
 var restartLater = document.getElementById('restartLater');
 restartLater.addEventListener("click", function() {
+	setOptions();
+	
     window.close();
 }); 

@@ -8,6 +8,11 @@ window {
 	background-image: url('chrome://userchrome/content/windows/rinFoxWizard/background.png');
 }
 
+radio {
+	gap: 4px;
+	align-items: flex-start;
+}
+
 #contentArea {
 	width: 100%;
 	height: 100%;
@@ -20,6 +25,10 @@ window {
 	flex: 1;
 	flex-direction: column;
 }
+
+.pageContent {
+	height: 100%;
+}	
 
 commandlinkbutton {
 	display: flex;
@@ -68,6 +77,11 @@ commandlinkbutton {
 	margin-block: 20px;
 }
 
+radio .wizardSecondaryHeader {
+	margin-inline: 0;
+	margin-block: 0;
+}
+
 .welcomeContainer .wizardSecondaryHeader {
 	margin-bottom: 0;
 }
@@ -97,4 +111,12 @@ commandlinkbutton {
 	height: 27px;
 	justify-content: center;
 	align-items: center;
+}
+
+.chooseSettingsContainer {
+	margin-inline: 44px;
+}
+
+.settingsDescription {
+	text-indent: 6px;
 }

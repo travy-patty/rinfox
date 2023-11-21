@@ -34,12 +34,6 @@
 							<label class="button-text">Next</label>
 						</hbox>
 					</button>
-					<button style="width:109px;" onclick="window.close();">
-						<hbox class="box-inherit button-box" align="center" pack="center" flex="1" anonid="button-box">
-							<image class="button-icon"/>
-							<label class="button-text">Ask me later</label>
-						</hbox>
-					</button>
 				</hbox>
 			</html:div>
 			
@@ -52,7 +46,7 @@
 						<h2 class="wizardSecondaryHeader">Choose between the look of Internet Explorer 7 or Internet Explorer 8.</h2>
 					</hbox>
 					<hbox class="appearanceOptionContent">
-						<commandlinkbutton onclick="showPage(2)">
+						<commandlinkbutton onclick="chosenIEAppearance = 0; showPage(2)">
 							<image class="commandLinkButtonThumbnail" src="chrome://userchrome/content/windows/rinFoxWizard/ie7.png" alt="Internet Explorer 7"/>
 							<hbox class="commandLinkLabel">
 								<image class="commandlinkbutton-glyph"/>
@@ -61,7 +55,7 @@
 								</vbox>
 							</hbox>
 						</commandlinkbutton>
-						<commandlinkbutton onclick="showPage(2)">
+						<commandlinkbutton onclick="chosenIEAppearance = 1; showPage(2)">
 							<image class="commandLinkButtonThumbnail" src="chrome://userchrome/content/windows/rinFoxWizard/ie8.png" alt="Internet Explorer 8"/>
 							<hbox class="commandLinkLabel">
 								<image class="commandlinkbutton-glyph"/>
@@ -80,12 +74,83 @@
 						<h1 class="wizardHeader">Choose your settings</h1>
 					</hbox>
 					<hbox>
-						<h2 class="wizardSecondaryHeader">Before you get started, choose your settings:</h2>
+						<h2 class="wizardSecondaryHeader">Before you get started, do you want to:</h2>
+					</hbox>
+					<vbox class="chooseSettingsContainer">
+						<hbox>
+							<radiogroup>
+								<radio id="expressSettings">
+								  <image class="radio-check" />
+								  <hbox class="radio-label-box">
+									<vbox>
+										<h2 class="wizardSecondaryHeader">Use express settings</h2>
+										<p class="settingsDescription">Example: Example</p>
+									</vbox>
+								  </hbox>
+								</radio>
+								<radio id="customSettings">
+								  <image class="radio-check" />
+								  <hbox class="radio-label-box">
+									<label class="radio-label">
+										<vbox>
+											<h2 class="wizardSecondaryHeader">Choose custom settings</h2>
+											<p class="settingsDescription">Review and modify each setting individually.</p>
+										</vbox>
+									</label>
+								  </hbox>
+								</radio>
+							</radiogroup>
+						</hbox>
+					</vbox>
+					<hbox class="dialogFooter">
+						<button onclick="showPage(1)">
+							<hbox class="box-inherit button-box" align="center" pack="center" flex="1" anonid="button-box">
+								<image class="button-icon"/>
+								<label class="button-text">Back</label>
+							</hbox>
+						</button>
+						<button onclick="checkForExpress()">
+							<hbox class="box-inherit button-box" align="center" pack="center" flex="1" anonid="button-box">
+								<image class="button-icon"/>
+								<label class="button-text">Next</label>
+							</hbox>
+						</button>
 					</hbox>
 				</vbox>
 			</html:div>
 			
 			<html:div id="page3" class="page">
+				<vbox class="pageContent">
+					<hbox class="headerContainer">
+						<h1 class="wizardHeader">Show fake Inner Borders</h1>
+					</hbox>
+					<hbox>
+						<h2 class="wizardSecondaryHeader">Show the fake Aero Inner Borders, which causes the window borders to have more padding.</h2>
+					</hbox>
+					<hbox class="appearanceOptionContent">
+						<commandlinkbutton onclick="hideInnerBorders = 0; showPage(4)">
+							<image class="commandLinkButtonThumbnail" src="chrome://userchrome/content/windows/rinFoxWizard/ie8.png" alt="Show Inner Borders"/>
+							<hbox class="commandLinkLabel">
+								<image class="commandlinkbutton-glyph"/>
+								<vbox>
+									<label class="title">Show Inner Borders</label>
+								</vbox>
+							</hbox>
+						</commandlinkbutton>
+						<commandlinkbutton onclick="hideInnerBorders = 1; showPage(4)">
+							<image class="commandLinkButtonThumbnail" src="chrome://userchrome/content/windows/rinFoxWizard/noinnerborder.png" alt="Hide Inner Borders"/>
+							<hbox class="commandLinkLabel">
+								<image class="commandlinkbutton-glyph"/>
+								<vbox>
+									<label class="title">Hide Inner Borders</label>
+								</vbox>
+							</hbox>
+						</commandlinkbutton>
+					</hbox>
+				</vbox>
+			</html:div>
+			
+			<html:div id="page4" class="page">
 				<vbox class="pageContent">
 					<hbox class="headerContainer">
 						<h1 class="wizardHeader">Thank you for choosing RinFox</h1>
@@ -109,7 +174,7 @@
 					</vbox>
 				</vbox>
 				<hbox class="dialogFooter">
-					<button id="backButton" onclick="showPage(1)">
+					<button onclick="showPage(2)">
 						<hbox class="box-inherit button-box" align="center" pack="center" flex="1" anonid="button-box">
 							<image class="button-icon"/>
 							<label class="button-text">Back</label>
