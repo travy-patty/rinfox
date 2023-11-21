@@ -210,6 +210,7 @@
       visibility: visible !important;
     }
     #history-panelmenu > .toolbarbutton-icon {
+      background-position-x: -52px !important;
       background-image: url('images/history-vista.png') !important;
     }
     #history-panelmenu:not([disabled="true"]) > .toolbarbutton-icon {
@@ -237,8 +238,13 @@
       padding: 2px 0 2px 0 !important;
     }
     #TabsToolbar toolbarbutton:not(#alltabs-button, #tabs-newtab-button, #tiptab_william_wong-BAP) {
-      min-width: 30px !important;
+      min-width: 24px !important;
       max-height: 24px !important;
+    }
+    #home-button,
+    #print-button,
+    #_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP {
+      width: 45px !important;
     }
     #titlebar {
       background-color: #B7C8F6 !important;
@@ -343,7 +349,11 @@
     #PanelUI-menu-button::after,
     #unified-extensions-button::after,
     #help-button::after,
-    #suggestedsites_bruni_com-BAP::after {
+    #suggestedsites_bruni_com-BAP::after,
+    #home-button::after,
+    #print-button::after,
+    #_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP::after
+    {
       background-image: url('images/chevron-vista.png') !important;
       margin-top: 2px !important;
     }
@@ -624,6 +634,23 @@
   }
   #PanelUI-menu-button .toolbarbutton-icon, #unified-extensions-button .toolbarbutton-icon {
     margin-left: 0 !important;
+  }
+}
+
+@supports -moz-bool-pref("RinFox.Option.HideFakeDropdownGlyphs") {
+  #TabsToolbar toolbarbutton:not(#alltabs-button, #tabs-newtab-button, #tiptab_william_wong-BAP) {
+    min-width: 32px !important;
+  }
+  #home-button, 
+  #print-button, 
+  #_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP {
+    width: unset !important;
+  }
+  #home-button::after,
+  #print-button::after,
+  #_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP::after {
+    content: none !important;
+    display: none !important;
   }
 }
 

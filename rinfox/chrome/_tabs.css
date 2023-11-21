@@ -26,7 +26,10 @@
 #PanelUI-menu-button::after,
 #unified-extensions-button::after,
 #help-button::after,
-#suggestedsites_bruni_com-BAP::after
+#suggestedsites_bruni_com-BAP::after,
+#home-button::after,
+#print-button::after,
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP::after
 {
   display: inline-block !important;
   content: '\75';
@@ -36,6 +39,12 @@
   background-repeat: no-repeat !important;
   background-position: center center !important;
   transform: translateX(-1px) !important;
+}
+
+#home-button::after,
+#print-button::after,
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP::after {
+  margin-inline-start: 4px !important;
 }
 
 #PanelUI-menu-button .toolbarbutton-text,

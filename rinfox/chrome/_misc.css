@@ -16,6 +16,10 @@
   box-shadow: none !important;
 }
 
+toolbar .toolbaritem-combined-buttons {
+  margin-inline: 0 !important;
+}
+
 /* Style Toolbar Separators */
 
 toolbarseparator {
@@ -146,8 +150,12 @@ toolbarseparator {
   background-color: transparent !important;
 }
 
+#unified-extensions-area {
+  padding-bottom: 5px !important;
+}
+
 #unified-extensions-area toolbaritem {
-  margin: 0 10px 5px 10px!important;
+  margin: 0 10px 0 10px !important;
 }
 
 #unified-extensions-area toolbarbutton {

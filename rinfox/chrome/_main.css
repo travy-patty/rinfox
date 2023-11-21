@@ -36,6 +36,10 @@
   list-style-image: url('images/add-favorite.png') !important;
 }
 
+#_a9c2ad37-e940-4892-8dce-cd73c6cbbc0c_-BAP {
+  list-style-image: url('images/rss.png') !important;
+}
+
 menupopup {
   appearance: unset !important;
 }

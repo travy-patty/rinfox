@@ -16,6 +16,7 @@ function executeFunctions() {
 	changeUnifiedExtensionsText();
 	changeSearchBarPlaceholder();
 	createHelpButton();
+	disableHistoryButton();
 	convertCheckboxesToNativeLook()
 	openRinFoxWizardWindow(true);
     console.info("Functions executed.");

@@ -78,6 +78,7 @@
   width: 23px !important;
   height: 29px !important;
   padding: 0 !important;
+  opacity: 1 !important;
 }
 
 #history-panelmenu > .toolbarbutton-icon {
