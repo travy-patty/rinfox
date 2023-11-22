@@ -79,6 +79,10 @@ toolbarbutton.toolbarbutton-1:not(
 	padding: 0 !important;
 }
 
+.bookmark-item[container] {
+  list-style-image: url("moz-icon:file:///C:/?size=16") !important;
+}
+
 /*
   Set Order of Toolbars
 */
