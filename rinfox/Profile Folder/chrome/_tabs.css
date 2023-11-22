@@ -185,7 +185,8 @@
   max-width: 299px !important
 }
 
-.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]):only-of-type .tab-close-button {
+.tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]):only-of-type .tab-close-button,
+.tab-secondary-label {
   display: none !important;
 }
 
