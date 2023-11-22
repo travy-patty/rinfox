@@ -8,7 +8,7 @@ function checkSmallBorderHackStatus() {
 
 const isSmallBorderBool = checkSmallBorderHackStatus();
 
-function applySmallBorderBack() {
+function applySmallBorderHack() {
 	if (isSmallBorderBool) {
 		document.documentElement.setAttribute('chromemargin', '2,2,2,2');
 	}

@@ -192,15 +192,11 @@ toolbarseparator {
         appearance: none !important;
       }
 
-      :root[tabsintitlebar] #nav-bar,
-      :root[chromemargin="2,2,2,2"]:not([tabsintitlebar]) #nav-bar
+      :root[tabsintitlebar] #nav-bar
       {
         padding-left: 2px !important;
         padding-right: 2px !important;
         padding-top: calc(var(--titlebar-height) + 10px) !important;
-      }
-      :root[chromemargin="2,2,2,2"]:not([tabsintitlebar], [sizemode="maximized"]) #nav-bar {
-        padding-top: 3px !important;
       }
       :root[tabsintitlebar]  #titlebar::after {
         height: calc(100% - var(--titlebar-height) - 41px) !important;
@@ -211,6 +207,27 @@ toolbarseparator {
         top: 0 !important;
         position: fixed !important;
       }
+      :root .titlebar-buttonbox {
+        position: fixed !important;
+        top: 0 !important;
+        right: 0 !important;
+      }
+    } 
+  }
+}
+
+@media (-moz-platform: windows-win8), (-moz-windows-glass), (-moz-windows-default-theme) {
+  @media not (-moz-windows-classic: 1) {
+    @media not (-moz-windows-compositor: 0) {
+      :root[chromemargin="2,2,2,2"]:not([tabsintitlebar]) #nav-bar
+      {
+        padding-left: 2px !important;
+        padding-right: 2px !important;
+        padding-top: calc(var(--titlebar-height) + 10px) !important;
+      }
+      :root[chromemargin="2,2,2,2"]:not([tabsintitlebar], [sizemode="maximized"]) #nav-bar {
+        padding-top: 3px !important;
+      }
       :root[chromemargin="2,2,2,2"]:not([tabsintitlebar], [sizemode="fullscreen"], [sizemode="maximized"]) .titlebar-buttonbox-container,
       :root[chromemargin="2,2,2,2"]:not([tabsintitlebar], [sizemode="fullscreen"], [sizemode="maximized"]) .titlebar-buttonbox {
         top: calc(var(--titlebar-height) * -1 + 2px) !important;
@@ -219,17 +236,11 @@ toolbarseparator {
       :root[chromemargin="2,2,2,2"]:not([tabsintitlebar]) .titlebar-buttonbox {
         display: flex !important;
       }
-      :root .titlebar-buttonbox {
-        position: fixed !important;
-        top: 0 !important;
-        right: 0 !important;
-      }
       :root[tabsintitlebar][sizemode="maximized"] #nav-bar,
       :root[chromemargin="2,2,2,2"][sizemode="maximized"] #nav-bar {
         padding-right: 0 !important;
         padding-top: calc(var(--titlebar-height) + 14px) !important;
       }
-      :root[tabsintitlebar][sizemode="maximized"] #titlebar::after,
       :root[chromemargin="2,2,2,2"][sizemode="maximized"] #titlebar::after {
         height: calc(100% - var(--titlebar-height) - 45px) !important;
         top: calc(var(--titlebar-height) + 43px) !important;
@@ -238,6 +249,6 @@ toolbarseparator {
         height: calc(100% - var(--titlebar-height) - 13px) !important;
         top: calc(var(--titlebar-height) + 11px) !important;
       }
-    } 
+    }
   }
 }

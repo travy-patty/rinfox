@@ -9,7 +9,7 @@ const { ctypes } = ChromeUtils.import("resource://gre/modules/ctypes.jsm");
 
 function executeFunctions() {
 	getAndSetTitleBarHeight();
-	applySmallBorderBack();
+	applySmallBorderHack();
 	moveBookmarksBar();
 	hideTabBarItems();
 	changeLibraryButtonText();
