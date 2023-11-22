@@ -15,11 +15,15 @@ function disableHistoryButton() {
 	let isForwardDisabled = forwardButton.hasAttribute('disabled');
 	let historyButton = document.getElementById("history-panelmenu");
 	
-	if (isBackDisabled == true && isForwardDisabled == true) {
-		historyButton.setAttribute("disabled", "true");
-	}
-	else {
-		historyButton.removeAttribute("disabled");
+	try {
+		if (isBackDisabled == true && isForwardDisabled == true) {
+			historyButton.setAttribute("disabled", "true");
+		}
+		else {
+			historyButton.removeAttribute("disabled");
+		}
+	} catch(error) {
+		console.log("Can't find History button.");
 	}
 
 }

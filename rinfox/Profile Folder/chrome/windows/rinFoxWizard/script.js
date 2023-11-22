@@ -63,7 +63,8 @@ function setOptions() {
         Services.prefs.setIntPref('browser.newtabpage.activity-stream.topSitesRows', 2);                // Enables two rows for the new tab page;
         Services.prefs.setBoolPref('browser.taskbar.previews.enable', true);                            // Enables taskbar tabs previews;
         Services.prefs.setBoolPref('browser.download.always_ask_before_handling_new_types', true);      // Enables legacy download dialog;
-        Services.prefs.setIntPref('security.dialog_enable_delay', 0);                                   // Disables OK button delay in the legacy download dialog.
+        Services.prefs.setIntPref('security.dialog_enable_delay', 0);                                   // Disables OK button delay in the legacy download dialog;
+		Services.prefs.setIntPref('browser.tabs.inTitlebar', 0);										// Disable Tabs in Titlebar;
 
         Services.prefs.setBoolPref('RinFox.parameter.isFirstRunFinished', true)
     }

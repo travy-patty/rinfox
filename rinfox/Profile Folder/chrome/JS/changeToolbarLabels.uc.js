@@ -8,30 +8,46 @@
 const TabToolbarCustomization = document.getElementById("TabsToolbar-customization-target");
 
 function changeLibraryButtonText() {
-	const LibraryButton = document.getElementById("library-button");
-	const LibraryButtonLabel = document.querySelector("#library-button label.toolbarbutton-text");
-	
-	LibraryButtonLabel.setAttribute("value", "Favorites");
+	try {
+		const LibraryButton = document.getElementById("library-button");
+		const LibraryButtonLabel = document.querySelector("#library-button label.toolbarbutton-text");
+		
+		LibraryButtonLabel.setAttribute("value", "Favorites");
+	} catch(error) {
+		console.log("Can't rename ToolbarButton.");
+	}
 };
 
 function changeFirefoxButtonText() {
-	const PanelUIButton = document.getElementById("PanelUI-button");
-	const PanelUIButtonLabel = document.querySelector("#PanelUI-menu-button label.toolbarbutton-text");
-		
-	TabToolbarCustomization.appendChild(PanelUIButton);
-	PanelUIButtonLabel.setAttribute("value", "Tools");
+	try {
+		const PanelUIButton = document.getElementById("PanelUI-button");
+		const PanelUIButtonLabel = document.querySelector("#PanelUI-menu-button label.toolbarbutton-text");
+			
+		TabToolbarCustomization.appendChild(PanelUIButton);
+		PanelUIButtonLabel.setAttribute("value", "Tools");
+	} catch(error) {
+		console.log("Can't rename ToolbarButton.");
+	}
 };
 
 function changeUnifiedExtensionsText() {
-	const UnifiedExtensionsButton = document.getElementById("unified-extensions-button");
-	const UnifiedExtensionsButtonLabel = document.querySelector("#unified-extensions-button label.toolbarbutton-text");
-	
-	TabToolbarCustomization.appendChild(UnifiedExtensionsButton);
-	UnifiedExtensionsButtonLabel.setAttribute("value", "Add-ons");
+	try {
+		const UnifiedExtensionsButton = document.getElementById("unified-extensions-button");
+		const UnifiedExtensionsButtonLabel = document.querySelector("#unified-extensions-button label.toolbarbutton-text");
+		
+		TabToolbarCustomization.appendChild(UnifiedExtensionsButton);
+		UnifiedExtensionsButtonLabel.setAttribute("value", "Add-ons");
+	} catch(error) {
+		console.log("Can't rename ToolbarButton.");
+	}
 };
 
 function changeSearchBarPlaceholder() {
-	const searchBarPlaceHolder = document.querySelector(".searchbar-textbox");
-	
-	searchBarPlaceHolder.setAttribute("placeholder", "Live Search");
+	try {
+		const searchBarPlaceHolder = document.querySelector(".searchbar-textbox");
+		
+		searchBarPlaceHolder.setAttribute("placeholder", "Live Search");
+	} catch(error) {
+		console.log("Can't rename ToolbarButton.");
+	}
 }
