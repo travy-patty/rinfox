@@ -497,6 +497,9 @@
       #alltabs-button {
         border-top-left-radius: 0 !important;
       }
+      #TabsToolbar {
+        border-top: 0 !important;
+      }
     }
     @media not (-moz-windows-compositor: 0) {
       #titlebar {

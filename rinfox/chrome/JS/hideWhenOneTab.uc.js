@@ -13,16 +13,22 @@ if (tabsToolbar) {
 	tabBarObserver.observe(tabsToolbar, { childList: true, subtree: true });
 }
 
+
+
 function hideTabBarItems() {
 	const tabCount = gBrowser.tabs.length;
-
-	tabBarItems.forEach((item) => {
-		const element = document.querySelector(item);
-		if (tabCount <= 1) {
-			element.style.display = "none";
-		}
-		else {
-			element.style.display = "";
-		}
-	});
+	
+	try {
+		tabBarItems.forEach((item) => {
+			const element = document.querySelector(item);
+			if (tabCount <= 1) {
+				element.style.display = "none";
+			}
+			else {
+				element.style.display = "";
+			}
+		});
+    } catch (error) {
+        console.log("Failed to hide DOM Elements.");
+    }
 }
