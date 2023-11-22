@@ -12,6 +12,9 @@
   .tabbrowser-tab[visuallyselected=true] .tab-background {
     background-image: linear-gradient(to bottom, #C3DDFB 0%, #F0F4FB 100%) !important;
   }
+  .tabbrowser-tab[visuallyselected=true] {
+    min-height: var(--tab-min-height) !important;
+  }
   .tab-background,
   #tabs-newtab-button,
   #alltabs-button,
