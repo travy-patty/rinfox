@@ -134,6 +134,7 @@
 }
 
 .urlbarView-row-inner {
+  flex-wrap: nowrap !important;
   min-height: 20px !important;
   padding-block: 0 !important;
   padding-inline: 25px !important;
@@ -325,6 +326,11 @@
   padding: 0 !important;
   list-style-image: none !important;
   margin-bottom: 1px !important;
+}
+
+#stop-button .toolbarbutton-animatable-box,
+#reload-button .toolbarbutton-animatable-box {
+  display: none !important;
 }
 
 #stop-button > .toolbarbutton-icon,

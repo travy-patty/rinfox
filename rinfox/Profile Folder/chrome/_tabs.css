@@ -186,7 +186,8 @@
 }
 
 .tabbrowser-tab[fadein]:not([pinned]):not([style*="max-width"]):only-of-type .tab-close-button,
-.tab-secondary-label {
+.tab-secondary-label,
+.tab-loading-burst {
   display: none !important;
 }
 
@@ -221,6 +222,10 @@
   opacity: 1 !important;
   background-image: url('images/spinner.png') !important;
   border: 0 !important;
+}
+
+.tab-throbber::before {
+  display: none !important;
 }
 
 #TabsToolbar-customization-target 
