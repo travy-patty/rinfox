@@ -177,6 +177,18 @@ toolbarseparator {
   list-style-image: url('images/settings.png') !important;
 }
 
+/* Native Bookmark Folder menupopups */
+toolbarbutton menupopup[placespopup] {
+  --panel-shadow-margin: 0 !important;
+  --panel-background: transparent !important;
+  --panel-color: unset !important;
+  --panel-border-color: transparent !important;
+  --panel-border-radius: 0 !important;
+  --panel-padding: 0 !important;
+  appearance: auto !important;
+  -moz-default-appearance: menupopup !important;
+}
+
 /* Fake "Native" Titlebar */
 
 @media (-moz-platform: windows-win7), (-moz-platform: windows-win8), (-moz-windows-glass), (-moz-windows-default-theme) {

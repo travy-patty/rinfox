@@ -46,6 +46,7 @@ function showPage(pageNumber) {
 }
 
 var chosenIEAppearance = 0;
+var smallerInnerBordersHack = 1;
 
 function setOptions() {
     let isRinFoxFirstRunFinished = false;
@@ -90,6 +91,17 @@ function setOptions() {
 		Services.prefs.setBoolPref('RinFox.Option.HideInnerBorders', true)
 		break;
     }
+	
+	switch (smallerInnerBordersHack) {
+	case 0:
+		// Smaller Inner Borders Hack Enabled
+		Services.prefs.setBoolPref('RinFox.Option.SmallerInnerBordersHack', true)
+		break;
+	case 1:
+		// Smaller Inner Borders Hack Disabled
+		Services.prefs.setBoolPref('RinFox.Option.SmallerInnerBordersHack', false)
+		break;
+    }
 }
 
 function checkForExpress() {
@@ -99,8 +111,9 @@ function checkForExpress() {
 	if (sel == "expressSettings")
 	{
 		hideInnerBorders = 0;
+		smallerInnerBordersHack = 0;
 		
-		showPage(4);
+		showPage(5);
 	}
 	else if (sel == "customSettings")
 	{

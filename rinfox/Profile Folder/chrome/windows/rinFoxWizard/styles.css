@@ -37,6 +37,7 @@ commandlinkbutton {
 	padding: 10px 15px;
 	color: rgb(21, 28, 85);
 	font-size: 11pt;
+	max-width: 195px;
 }
 
 .commandLinkButtonThumbnail {
@@ -94,6 +95,10 @@ radio .wizardSecondaryHeader {
 
 .restartContainer {
 	margin-inline: 52px;
+}
+
+.restartContainer commandlinkbutton {
+	max-width: 100%;
 }
 
 .dialogFooter {

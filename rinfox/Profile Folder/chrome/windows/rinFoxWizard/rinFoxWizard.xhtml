@@ -83,7 +83,8 @@
 								  <hbox class="radio-label-box">
 									<vbox>
 										<h2 class="wizardSecondaryHeader">Use express settings</h2>
-										<p class="settingsDescription">Example: Example</p>
+										<p class="settingsDescription">Show fake Inner Borders: Enabled</p>
+										<p class="settingsDescription">Smaller Inner Borders Hack: Enabled</p>
 									</vbox>
 								  </hbox>
 								</radio>
@@ -150,6 +151,31 @@
 			</html:div>
 			
 			<html:div id="page4" class="page">
+				<vbox class="pageContent">
+					<hbox class="headerContainer">
+						<h1 class="wizardHeader">Smaller Inner Borders Hack</h1>
+					</hbox>
+					<hbox>
+						<h2 class="wizardSecondaryHeader">A hack to have smaller window borders when Inner Borders are enabled, which causes bugs.</h2>
+					</hbox>
+					<vbox class="restartContainer">
+						<commandlinkbutton onclick="smallerInnerBordersHack = 0; showPage(5)">
+							<hbox>
+								<image class="commandlinkbutton-glyph"/>
+								<label class="title">Enable Smaller Inner Borders</label>
+							</hbox>
+						</commandlinkbutton>
+						<commandlinkbutton onclick="smallerInnerBordersHack = 1; showPage(5)">
+							<hbox>
+								<image class="commandlinkbutton-glyph"/>
+								<label class="title">Disable Smaller Inner Borders</label>
+							</hbox>
+						</commandlinkbutton>
+					</vbox>
+				</vbox>
+			</html:div>
+			
+			<html:div id="page5" class="page">
 				<vbox class="pageContent">
 					<hbox class="headerContainer">
 						<h1 class="wizardHeader">Thank you for choosing RinFox</h1>
