@@ -28,11 +28,11 @@
   list-style-image: url('images/help.png') !important;
 }
 
-#library-button {
+#bookmarksSidebarButton {
   list-style-image: url('images/favorites.png') !important;
 }
 
-#bookmarks-menu-button {
+#addToBookmarksBarButton {
   list-style-image: url('images/add-favorite.png') !important;
 }
 

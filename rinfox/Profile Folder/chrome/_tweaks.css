@@ -49,15 +49,15 @@
   #history-panelmenu > .toolbarbutton-icon {
     background-image: url('images/history-ie8.png') !important;
   }
-  #library-button {
+  #bookmarksSidebarButton {
     padding-inline: 7px 11px !important;
     gap: 5px !important;
   }
-  #TabsToolbar #library-button {
+  #TabsToolbar #bookmarksSidebarButton {
     margin-left: -5px !important;
     margin-right: 10px !important;  
   }
-  #library-button > .toolbarbutton-text {
+  #bookmarksSidebarButton > .toolbarbutton-text {
     background-color: transparent !important;
     padding: 0 !important;
     border-radius: 0 !important;
@@ -65,7 +65,7 @@
     align-items: center !important;
     margin-bottom: 2px !important;
   }
-  #bookmarks-menu-button {
+  #addToBookmarksBarButton {
     list-style-image: url('images/add-favorite-ie8.png') !important;
   }
 }
