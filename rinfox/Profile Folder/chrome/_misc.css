@@ -254,12 +254,12 @@ toolbarbutton menupopup[placespopup] {
         padding-top: calc(var(--titlebar-height) + 14px) !important;
       }
       :root[chromemargin="2,2,2,2"][sizemode="maximized"] #titlebar::after {
-        height: calc(100% - var(--titlebar-height) - 45px) !important;
-        top: calc(var(--titlebar-height) + 43px) !important;
+        height: calc(100% - 64px) !important;
+        top: 62px !important;
       }
       :root[chromemargin="2,2,2,2"]:not([tabsintitlebar], [sizemode="maximized"]) #titlebar::after {
-        height: calc(100% - var(--titlebar-height) - 13px) !important;
-        top: calc(var(--titlebar-height) + 11px) !important;
+        height: calc(100% - 34px) !important;
+        top: 32px !important;
       }
     }
   }

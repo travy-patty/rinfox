@@ -6,6 +6,7 @@ window {
 	width: 603px;
 	height: 423px;
 	background-image: url('chrome://userchrome/content/windows/rinFoxWizard/background.png');
+	background-size: 603px 423px;
 }
 
 radio {

@@ -240,7 +240,7 @@
     #nav-bar {
       padding: 2px 0 2px 0 !important;
     }
-    #TabsToolbar toolbarbutton:not(#alltabs-button, #tabs-newtab-button, #tiptab_william_wong-BAP) {
+    #TabsToolbar toolbarbutton:not(#alltabs-button, #tabs-newtab-button, #tiptab_william_wong-BAP, #bookmarks-menu-button, #library-button) {
       min-width: 24px !important;
       max-height: 24px !important;
     }
