@@ -40,6 +40,10 @@
   list-style-image: url('images/rss.png') !important;
 }
 
+.geo-icon {
+  list-style-image: url('images/map.png') !important;
+}
+
 menupopup {
   appearance: unset !important;
 }

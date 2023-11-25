@@ -189,6 +189,172 @@ toolbarbutton menupopup[placespopup] {
   -moz-default-appearance: menupopup !important;
 }
 
+/* Sidebar Ui */
+#sidebar-box[positionend="true"] {
+  min-width: 290px !important;
+  height: calc(100% - 75px - 62px) !important;
+  position: fixed !important;
+  left: 2px !important;
+  top: 62px !important;
+  z-index: 1 !important;
+  border: 1px solid #A0A0A0 !important;
+}
+
+#sidebar-box {
+  background-color: #E4EDF9 !important;
+}
+
+#sidebar-header {
+  font-size: unset !important;
+  padding: 6px 5px !important;
+  border: 0 !important;
+}
+
+#sidebar-switcher-target {
+  appearance: auto !important;
+  max-height: 24px !important;
+}
+
+#sidebar-box > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+  margin-left: 1px !important;
+  opacity: 1 !important;
+}
+
+#sidebar-box[sidebarcommand="viewBookmarksSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+  list-style-image: url('images/favorites.png') !important;
+}
+
+#sidebar-box[sidebarcommand="viewHistorySidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+  list-style-image: url('images/history-icon.png') !important;
+}
+
+#sidebar-box[sidebarcommand="viewTabsSidebar"] > #sidebar-header > #sidebar-switcher-target > #sidebar-icon {
+  list-style-image: url('images/tabs.png') !important;
+}
+
+#sidebar-title {
+  padding-left: 3px !important;
+  padding-right: 5px !important;
+}
+
+#sidebar-switcher-arrow {
+  width: 5px !important;
+  height: 3px !important;
+  list-style-image: url('images/chevron.png') !important;
+  margin-top: 1px !important;
+  margin-right: 2px !important;
+}
+
+#sidebar-box[positionend="true"] #sidebar-close {
+  width: 17px !important;
+  height: 17px !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  list-style-image: url('images/sidebaricon.png') !important;
+  transition: transform .3s steps(5);
+}
+
+#sidebar-box[positionend="true"] #sidebar-close:active {
+  transform: translate(1px, 1px) !important;
+}
+
+#sidebar-search-container,
+#sidebar-box[positionend] + .sidebar-splitter {
+  display: none !important;
+}
+
+.sidebar-placesTree {
+  appearance: auto !important;
+  -moz-default-appearance: listbox !important;
+  margin-inline: 5px !important;
+  margin-bottom: 6px !important;
+}
+
+@media (-moz-platform: windows-win7), (-moz-platform: windows-win8), (-moz-windows-glass), (-moz-windows-default-theme) {
+  @media not (-moz-windows-classic: 1) {
+    #sidebar-switcher-arrow {
+      width: 7px !important;
+      height: 4px !important;
+      list-style-image: url('images/chevron-vista.png') !important;
+    }
+  }
+}
+
+/* Popup Blocker */
+#tab-notification-deck {
+  margin-inline: 2px !important;
+}
+
+notification-message {
+  transition: none !important;
+}
+
+notification-message[message-bar-type="infobar"] {
+  margin: 0 !important;
+}
+
+notification-message[style="margin-top: -23px; opacity: 0;"] {
+  margin-top: -23px !important;
+}
+
+.container.infobar {
+  min-height: 23px !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding-inline: 4px !important;
+  background-color: #FFFFE1 !important;
+  align-items: center !important;
+}
+
+.container.infobar:hover {
+  background-color: Highlight !important;
+  color: HighlightText !important;
+}
+
+.container.infobar::before {
+  display: none !important;
+}
+
+.infobar > .icon {
+  margin: 0 !important;
+}
+
+.notification-content {
+  margin-inline-start: 4px !important;
+}
+
+.notification-message {
+  vertical-align: unset !important;
+  padding-block: 0 !important;
+}
+
+.notification-close {
+  width: 22px !important;
+  height: 22px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-image: url('images/close.png') !important;
+  background-size: 8px 8px !important;
+  transform: translateY(-1px) !important;
+}
+
+.notification-close:active {
+  transform: translate(1px, 0px) !important;
+}
+
+.notification-button {
+  opacity: 0 !important;
+  width: calc(100% - 4px) !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  position: absolute !important;
+  border-radius: 0 !important;
+  margin: 0 !important;
+}
+
 /* Fake "Native" Titlebar */
 
 @media (-moz-platform: windows-win7), (-moz-platform: windows-win8), (-moz-windows-glass), (-moz-windows-default-theme) {
