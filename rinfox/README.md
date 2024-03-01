@@ -14,7 +14,7 @@ Rinfox is a Mozilla Firefox theme that mimicks the look and feel of Internet Exp
 
 1.2.	Copy the contents of the Profile Folder to the Root Directory of the profile folder (if you don't know, open firefox and type `about:profiles` in the address bar).
 
-2.	Download and install [Resource Hacker](https://angusj.com/resourcehacker/) (if your OS is NOT Windows Vista/7) - this is to enable glass in navigation pane
+2.	Download and install [Resource Hacker](https://angusj.com/resourcehacker/) (if your OS is NOT Windows Vista/7 or if you want IE8 icons) - this is to enable glass in navigation pane
 
 2.1.	Run as administrator
 
@@ -24,7 +24,11 @@ Rinfox is a Mozilla Firefox theme that mimicks the look and feel of Internet Exp
 <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
 <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
 ```
-2.3.	Restart your computer.
+2.3 **(Optional)** Still within Resource Hacker, go to Icon Group and change the icons to their IE7/8 counterparts:
+* 1, 32512 -> App.ico
+* 2,  6 -> File.ico
+
+2.4.	Restart your computer.
 
 3. Open Firefox and follow the instructions of the wizard that appears on-screen.
 
