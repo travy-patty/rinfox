@@ -24,7 +24,7 @@ Rinfox is a Mozilla Firefox theme that mimicks the look and feel of Internet Exp
 <supportedOS Id="{1f676c76-80e1-4239-95bb-83d0f6d0da78}"/>
 <supportedOS Id="{4a2f28e3-53b9-4441-ba9c-d69d4a4a6e38}"/>
 ```
-2.3 **(Optional)** Still within Resource Hacker, change these icons to the included IE7/8 counterparts:
+2.3 **(Optional)** Still within Resource Hacker, go to Icon Group and change the icons to their IE7/8 counterparts:
 * 1, 32512 -> App.ico
 * 2,  6 -> File.ico
 
