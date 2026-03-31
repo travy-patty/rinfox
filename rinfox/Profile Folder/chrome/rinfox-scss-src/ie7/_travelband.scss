@@ -1,0 +1,91 @@
+#back-button {
+    padding: 0 !important;
+    opacity: 1 !important;
+    width: 29px !important;
+    height: 29px !important;
+    background-image: url("chrome://rinfox/content/images/styles/ie7/vista/travel_background.png") !important;
+    background-position-x: -76px !important;
+    list-style-image: none !important;
+    margin-inline-start: 2px !important;
+
+    .toolbarbutton-icon {
+        width: 27px !important;
+        height: 100% !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        background-color: transparent !important;
+    }
+}
+
+#forward-button {
+    height: 29px !important;
+    opacity: 1 !important;
+    padding: 0 !important;
+    align-items: stretch !important;
+    background-image: url("chrome://rinfox/content/images/styles/ie7/vista/travel_background.png") !important;
+    background-position-x: -105px !important;
+
+    &[disabled="true"] {
+        background-position-x: -29px !important;
+    }
+
+    &:not([disabled="true"])[dropdown-hover="true"] {
+        background-position-x: -181px !important;
+    }
+
+    &:not([disabled="true"])[open="true"] {
+        background-position-x: -257px !important;
+    }
+
+    #forward-button-toolbarbutton {
+        appearance: none !important;
+        opacity: 1 !important;
+        padding: 0 !important;
+        min-width: 29px !important;
+
+        .toolbarbutton-icon {
+            width: 27px !important;
+            height: 100% !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            background-color: transparent !important;
+            list-style-image: none !important;
+            background-position-x: -27px !important;
+        }
+    }
+
+    .toolbarbutton-menu-dropdown {
+        appearance: none !important;
+        list-style-image: none !important;
+        min-width: 18px !important;
+
+        .toolbarbutton-icon {
+            padding: 0 !important;
+        }
+    }
+}
+
+#back-button,
+#forward-button {
+    .toolbarbutton-icon {
+        background-image: url("chrome://rinfox/content/images/styles/ie7/vista/travel_enabled.png") !important;
+    }
+
+    &[disabled="true"] {
+        .toolbarbutton-icon {
+            background-image: url("chrome://rinfox/content/images/styles/ie7/vista/travel_disabled.png") !important;
+        }
+    }
+
+    &:not([disabled="true"], [dropdown-hover="true"]):hover {
+        .toolbarbutton-icon {
+            background-image: url("chrome://rinfox/content/images/styles/ie7/vista/travel_hot.png") !important;
+        }
+
+        &:active {
+            .toolbarbutton-icon {
+                background-image: url("chrome://rinfox/content/images/styles/ie7/vista/travel_pressed.png") !important;
+            }
+        }
+    }
+}

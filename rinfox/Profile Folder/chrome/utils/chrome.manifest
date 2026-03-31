@@ -1,4 +1,10 @@
-content userchromejs ./
-content userscripts ../JS/
-skin userstyles classic/1.0 ../CSS/
-content userchrome ../
+content userchromejs                                                ./
+content userscripts                                                 ../JS/
+content modules                                                     ../JS/modules/
+
+locale  rinfox                                                      en-US ../locale/en-US/
+
+skin	userstyles	                                                classic/1.0	../CSS/
+
+content userchrome                                                  ../ contentaccessible=yes
+content rinfox                                                      ../assets/ contentaccessible=yes

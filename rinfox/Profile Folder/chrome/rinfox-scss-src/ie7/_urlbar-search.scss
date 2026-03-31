@@ -1,0 +1,15 @@
+:root {
+    --urlbar-root-height: 26px !important;
+    --urlbar-min-height: var(--urlbar-root-height) !important;
+
+    #urlbar-container {
+        --urlbar-container-height: var(--urlbar-root-height) !important;
+        padding: 0 !important;
+        min-height: var(--urlbar-root-height) !important;
+
+        #urlbar {
+            --urlbar-height: var(--urlbar-root-height) !important;
+            min-height: var(--urlbar-root-height) !important;
+        }
+    }
+}

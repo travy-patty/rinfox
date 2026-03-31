@@ -1,0 +1,24 @@
+:root {
+    appearance: auto !important;
+    -moz-default-appearance: -moz-win-glass !important;
+
+    #browser {
+        appearance: auto !important;
+        -moz-default-appearance: -moz-win-exclude-glass !important;
+        background-color: -moz-Dialog !important;
+
+        #tabbrowser-tabbox {
+            appearance: none !important;
+        }
+    }
+
+    #navigator-toolbox {
+        border-bottom: 0 !important;
+    }
+
+    #customization-container {
+        appearance: auto !important;
+        -moz-default-appearance: -moz-win-exclude-glass !important;
+        background-color: -moz-Dialog !important;
+    }
+}

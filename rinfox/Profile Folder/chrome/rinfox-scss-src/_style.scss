@@ -1,0 +1,7 @@
+/* ::::: Internet Explorer 7 ::::: */
+@import "ie7/style";
+
+/* ::::: Internet Explorer 8 ::::: */
+:root[rinfox-appearance-ie8] {
+    @import "ie8/style";
+}
