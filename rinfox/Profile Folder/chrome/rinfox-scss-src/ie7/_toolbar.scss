@@ -1,0 +1,8 @@
+#PersonalToolbar {
+  align-items: center !important;
+
+  &::before {
+    content: 'Links';
+    display: block;
+  }
+}

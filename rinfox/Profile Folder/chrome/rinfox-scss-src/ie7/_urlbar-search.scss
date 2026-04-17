@@ -10,6 +10,34 @@
         #urlbar {
             --urlbar-height: var(--urlbar-root-height) !important;
             min-height: var(--urlbar-root-height) !important;
+
+            &[breakout][breakout-extend] {
+
+
+                border-radius: 0 !important;
+                background-color: transparent !important;
+                background-image: url("assets/images/styles/ie7/vista/urlbar-spritesheet-middle.png") !important;
+                width: calc(100% - 3px) !important;
+                height: var(--urlbar-height) !important;
+
+                box-shadow: none !important;
+                outline: 0 !important;
+                appearance: none !important;
+            }
+
+            #urlbar-background {
+                background-image: url("assets/images/styles/ie7/vista/urlbar-spritesheet-middle.png") !important;
+
+                &::before {
+                    content: '';
+                    display: inline-block;
+                    width: 3px;
+                    height: var(--urlbar-height);
+                    position: absolute !important;
+                    background-image: url("assets/images/styles/ie7/vista/urlbar-spritesheet-left.png") !important;
+                    left: -3px !important;
+                }
+            }
         }
     }
 }

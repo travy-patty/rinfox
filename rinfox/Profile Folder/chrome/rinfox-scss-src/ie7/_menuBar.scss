@@ -1,0 +1,20 @@
+#toolbar-menubar {
+  order: -3 !important;
+  border: 0 !important;
+  appearance: auto !important;
+  &::before {
+    content: '';
+    display: inline-block;
+    position: absolute !important;
+    appearance: toolbar !important;
+    width: 100%;
+  }
+
+  #main-menubar > menu {
+    appearance: auto !important;
+
+    &[_moz-menuactive] {
+      color: HighlightText !important;
+    }
+  }
+}
